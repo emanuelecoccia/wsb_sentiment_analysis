@@ -1,0 +1,2097 @@
+stock_symbol,post_id,dt,title,body,flair,upvote_ratio
+BIG,fm2f0q,2020-03-20 21:45:55,"As of today, THE BIG SHORT has now returned over 10 MILLION DOLLARS AND RISING!!!",,Satire,0.94
+SPY,fm241w,2020-03-20 21:28:11,Lost my ass today. 3/23 89 $SPY 240c. I feel awfully fucked unless a miracle happens Monday,,Loss,0.96
+TEAM,fm0suq,2020-03-20 20:12:41,👷🏗️📣 OFFICIAL DRILL TEAM 6 ANNOUNCEMENT 👷🏗️📣,"Witching is officially cancelled. Ain't no dumb bitches casting no spooky shit around these parts. If you thought on a day when THE ARMY HAS CORONA VIRUS SPREADING WITHIN THEIR RANKS. California on lockdown, NYC considering lockdown, that it would be green? You are retarded.
+
+SPY 4/17 197p confirmed sweet spot. Enjoy the tendies Bear gang, thanks for the drilling contract, will gladly work with you and your associates again.
+
+tl;dr Bulls r fuk
+
+# ✅Official Drill Team Checklist
+
+☑️Army confirmed virus in ranks today  
+☑️California on lockdown  
+☑️NYC about to lockdown  
+☑️National guard being deployed  
+☑️I'm gay  
+☑️Bulls shouting ""tRiPlE wItChInG wIlL bE gReEn dAy wAtcH!""  
+☑️Unemployment list delayed lmao  
+☑️Religious people all around the world gathering to PRAY COVID AWAY  
+☑️Spring break college kids still going to party  
+☑️Bulls listening to ""technical analysis about previous Witching days so it must be green""
+
+❌Market is green",Shitpost,0.96
+A,flzwq3,2020-03-20 19:22:23,A Brief Introduction To Stocks And Options For My Fellow Degenerates,"I know the vast majority of people here are beautiful minds and don't need this, but maybe this can help the newcomers build upon what they already know.  Since stock investing is a straightforward concept, we'll build upon that to explain how options trading works. If you prefer to read a version with inline images, that can be found [here](https://www.karma.fm/p/53IhuQS/stocks-and-options-for-dummies).
+
+## Going ""Long"" on Stocks
+
+Going ""long"" on a stock means that if the price goes up, your profits go up. Up = good, down = bad.
+
+When you buy a share, you create a sort of **contract** with a stock exchange. This contract is stored on their internal, proprietary database: their ledger.
+
+The plain-English contract between you and the exchange is: ""Hey, I'm Mack Doodle, and I own one share of $FOO, purchased at $100. I have the right to sell it to a buyer at any point in the future, at a price determined by the market."" The contract is executed instantly. It's kind of like a game:
+
+[https://i.imgur.com/Gowsqzv.png](https://i.imgur.com/Gowsqzv.png)
+
+## Shorting a stock
+
+Shorting a stock is the opposite ""going long"". If the price goes down when you're holding a short position, your profits go up.
+
+Here's how shorting works¹: Given a share price of $100 that you expect to drop, you can effectively borrow $100 from a broker and promise to pay it back in the form of one share. If the price drops, you can buy a share using this borrowed money and give it to the broker. You gain the difference.
+
+*¹: Technically, it's a bit more complicated. The above simplification is a heuristic I use because it's conceptually accurate. You actually borrow stock, not cash. If you short 100 shares of $TSLA, the broker lets you borrow 100 shares from someone else's account and sells them on your behalf, finally giving you the cash. You're then on the hook for those 100 shares at some point in the future - you have to cover your short position. If TSLA goes down, you can buy them at a lower price and make money on that delta.*
+
+When you're short and price increases, you either wait for it to come back down, or you eat the losses and buy a share at the higher price using the borrowed money plus some of your own money before giving it back to the broker. You'd lose the difference.
+
+The plain-English contract between you and the exchange is: ""Hey, I'm Mack Doodle, and I have borrowed $100 from you with the promise of paying you back in the form of one $FOO share, currently valued at $100. I am on the hook to eventually get my hands on a share for you at any point in the future. If the price of one $FOO share increases to $120, I will have to use the money that I borrowed from you to buy a portion of that share, and then $20 of my own money to buy the rest of the share. I will then give you the share at a personal loss of 20%. If the price of one $FOO share decreases to $80, I will be able to use the money that I borrowed from you to buy an entire share, and then keep the extra $20 for myself."" This game is similar to the first, but flipped:
+
+[https://i.imgur.com/vkAENZX.png](https://i.imgur.com/vkAENZX.png)
+
+Short means ""up is bad; down is good"". Each of these instruments allow you to engage with the market through a contract that records the following:
+
+    Contract Type: Purchase Stock
+    ----------------------------
+    Wallet ID: Mack Doodle
+    Ticker symbol: $FOO
+    Price at time of contract creation: $100
+    Price at time of contract execution: $100
+    Number of shares: 1
+    Buying or selling: Buying
+    Date contract signed: Just now
+    Date contract executed: Just now (manual execution)
+
+## Limit and Stop Orders
+
+The Price at time of time of contract execution doesn't have to be the current price, though. If you $FOO is currently priced at $100 and you want to go long when it hits $120 because you anticipate an upward breakout at that price, you can place a ""buy stop order"". If you want to go short when $FOO hits $120 because you anticipate a downward correction, you can place a ""sell stop order"". Even if the price of $FOO is $100, you can purchase the following contract:
+
+    Contract Type: Buy Stop Order
+    ----------------------------
+    Wallet ID: Bobby Ronson
+    Ticker symbol: $FOO
+    Price at time of contract creation: $100
+    Price at time of contract execution: $120 [New!]
+    Number of shares: 1
+    Buying or selling: Buying
+    Date contract signed: Just now
+    Date contract executed: TBD (by price action) [New!]
+
+This contract, in contrast to the first, will only execute if and when the price equals $120. It's a more nuanced game, but not all that different from the two we've seen so far:
+
+[https://i.imgur.com/8oABtgj.png](https://i.imgur.com/8oABtgj.png)
+
+Once the share price trips the wire of your limit, the contract is executed just like the very first game we played.
+
+This isn't commonly used by retail investors (like you and me), but this concept is used frequently by quant/algo funds.
+
+## Options
+
+An option is a slightly more complex instrument.
+
+The simple rule is that if a share price moves away from a specific value *by a specific time*, you profit. Note the added dimension of gameplay - a time limit. This compresses your confidence down into a timeframe, which translates to much higher risk, and also much higher reward. I think of options as facilitating *aggressive investing* \- not just gambling. Though I think all investing becomes gambling at *some* timescale.
+
+## Going long with a call option
+
+Given a share price of $100 that you expect to climb beyond $120 by November 5th, you may purchase the option to ""purchase a share - or *call it into your wallet* \- for $120 at any point between now and November 5th"". If the price increases from $100 to $200 sometime between now and November 5th, you can exercise your option for an $80 profit. If the price never hits $120, and instead falls to a November 5th price of $40, you aren't obligated to do anything; you can opt to eat the cost of the option. Here's what the options game looks like:
+
+[https://i.imgur.com/SOXPdlG.png](https://i.imgur.com/SOXPdlG.png)
+
+## Going short with a put option
+
+Given a share price of $100 that you expect to climb no higher than $120 by November 5th, you may buy the option to ""sell a share (or put it out of your wallet) for $120 at any point between now and November 5th"". If the price falls to a November 5th price of $40, you can then exercise your option for an $80 profit. If the price rockets up to $200, you're under no obligations and only have to eat the relatively small cost of the option.
+
+Note that if the price never hits break-even, you're responsible for your loss of principal; it's not like there's no downside.
+
+[https://i.imgur.com/6klYYGN.png](https://i.imgur.com/6klYYGN.png)
+
+Options and stocks are two different types of financial instruments that are traded in two different markets. The price that you pay for an option is determined by supply and demand, in the same way that the price of a share is determined by supply and demand. The supply and demand for an option is derived from the supply and demand of the underlying shares. This is why options are referred to as derivative instruments. They're higher up on the value funnel; they're more volatile; there's more potential for dramatic gains and losses:
+
+[https://i.imgur.com/F0fhVeC.png](https://i.imgur.com/F0fhVeC.png)
+
+Here's what an option contract looks like:
+
+    Contract Type: Buy Call Option
+    ----------------------------
+    Wallet ID: Mack Doodle
+    Ticker symbol: $FOO
+    Price at time of contract creation: $100
+    Price at time of contract execution: $120 [""strike price""]
+    Number of shares: 100 [1 contract = 100 shares]
+    Buying or selling: ""Buying"" [Buying a call option = long]
+    Date contract signed: Just now
+    Date contract executed: TBD [See Note]
+    Date contract expires: November 5th [New!]
+    Option price: $200 [New!]
+
+Once you hold an option contract, you can do three things with it: You can manually exercise it at any time before the expiry; it can automatically be exercised by the broker at expiry; you can sell the contract back into the market.
+
+Let's look at an example using a real stock: Tesla.
+
+Let's suppose that I have $10,000 that I would like to invest in Tesla, and that I'm so confident in Tesla that I'm willing to throw it all away on a highly leveraged, optimistic bet. At the time of this writing, $TSLA was trading at $221. I expect it to be far above $221 by Q4 2019. Here are my games:
+
+**Game 1: Going long with stocks**
+
+* I can buy 10,000 / 221 = \~45 shares
+* My ""break even"" is at a share price of just over $221 since the ""price to play"" is simply the $5 trade commission that my broker charges me.
+* Worst case is the stock tanks overnight and I lose $10,000.
+* Ideal case is the stock climbs to $400 and I earn (400–221) \* 45 or \~$8,000 (or potentially much more - stocks have no time limits)
+* My max loss is $10,000, or 100% of my investment; my potential gain is \~80%.
+
+&#x200B;
+
+**Game 2: Going long with options**
+
+The $225 December strike price will cost about $35 per share:
+
+[https://i.imgur.com/06NgPMX.png](https://i.imgur.com/06NgPMX.png)
+
+&#x200B;
+
+* I have the market power equivalent of 10,000 / 35 = \~285 shares, or just under 3 contracts. (partial contracts are not allowed, but for this example, let's suppose they are)
+* My ""break even"" is at a share price of 221 + $35 option price = \~$256. If the price breaks $256 between now and December, I'm golden.
+* Worst case is the stock tanks overnight and I lose the $10,000 option contract.
+* Ideal case is the stock climbs to $400 by December and I earn (400–225) \* 285 or \~$50,000
+* My max loss is $10,000–100% of my investment; my potential gain is \~500%.
+
+Options magnify my potential reward while also magnifying the potential for losses; Tesla dipping 20% means I lose 100% of my principal.
+
+Here's my ""contract"", in this case:
+
+    Contract Type: Buy Call Option
+    Wallet ID: Mack Doodle 
+    Ticker symbol: $TSLA 
+    Price at time of contract creation: $221 
+    Price at time of contract execution: $225 [""strike price""] 
+    Number of shares: 285 Buying or selling: ""Buying"" [Buying a call option = long] 
+    Date contract signed: Just now 
+    Date contract executed: TBD 
+    Date contract expires: December 20th 
+    Option price: $10,000
+
+&#x200B;
+
+That's about it! Keep in mind that this is a game, and our nationalized financial industry employs some of the most clever and greedy gamblers out there. The house generally wins, but just like poker - with the right mental models, discipline, and risk appetite, you can come out far ahead. It's not unlike poker in that self-education and exercise translate to vastly improved odds at the table.
+
+*Note: If you have any feedback or would like to improve this for others, drop a comment below!*",Options,0.87
+NEW,flwv1y,2020-03-20 16:27:27,NEW YORK STATE LOCK DOWN,[deleted],Discussion,0.97
+IS,flrqkf,2020-03-20 09:49:12,RIP MSFT 200C 3/20 - WHAT IS DEAD MAY NEVER DIE,,Meme,0.97
+MSFT,flrqkf,2020-03-20 09:49:12,RIP MSFT 200C 3/20 - WHAT IS DEAD MAY NEVER DIE,,Meme,0.97
+SPY,flrapu,2020-03-20 09:06:08,I made a late night SPY graph for you,"It was worth a try, but this specific algo has turned out to not be all that useful. The project has been discontinued, thanks for watching.
+_____
+This is not financial advice. Welcome to my attempt at predicting SPY's future price movements. I'm currently testing two different algos, A and B. In previous graphs, you can ignore the ""confidence"" line, as it turned out to be bogus.
+_____
+
+[Aug 25 2020](https://imgur.com/Iwjd1d7)
+
+[Aug 24 2020](https://imgur.com/f2HbZms)
+
+[Aug 21 2020](https://imgur.com/RXAK2m1)
+
+[Aug 20 2020](https://imgur.com/hilXczS)
+
+[Aug 19 2020](https://imgur.com/grCMIVk)
+
+[Aug 18 2020](https://imgur.com/5DhUTm7)
+
+[Aug 17 2020](https://imgur.com/WOAqVOC)
+
+[Aug 14 2020](https://imgur.com/ciwf2EE)
+
+[Aug 13 2020](https://imgur.com/kdwWLMG)
+
+[Aug 12 2020](https://imgur.com/xych2iW)
+
+[Aug 11 2020](https://imgur.com/KxeyE85)
+
+[Aug 10 2020](https://imgur.com/0gEAY5G)
+
+[Aug 07 2020](https://imgur.com/nySChXz)
+
+[Aug 06 2020](https://imgur.com/t8qpjXc)
+
+-[Aug 05 2020](https://imgur.com/7sWyf4M)
+
+-[Aug 05 2020 Zoomed Out](https://imgur.com/Shse9uI)
+
+[Aug 04 2020](https://imgur.com/TDMhqdq)
+
+[Aug 03 2020](https://imgur.com/3qVY7GN)
+
+[July 31 2020](https://imgur.com/nE9Jcrd)
+
+[July 30 2020](https://imgur.com/sjfO2yD)
+
+[July 29 2020](https://imgur.com/sXdxB2x)
+
+[July 28 2020](https://imgur.com/72NxhK3)
+
+[July 27 2020](https://imgur.com/AnqHjbh)
+
+[July 24 2020](https://imgur.com/QQtUI7u)
+
+[July 23 2020](https://imgur.com/BCSUjbo)
+
+[July 22 2020](https://imgur.com/qE1VcTn)
+
+[July 21 2020](https://imgur.com/O40e6G9)
+
+[July 20 2020](https://imgur.com/ow1CVRy)
+
+[July 17 2020](https://imgur.com/Yj50KAm)
+
+[July 16 2020](https://imgur.com/xGtgQAq)
+
+[July 15 2020](https://imgur.com/SlQCJCG)
+
+[July 14 2020](https://imgur.com/xxB4klK)
+
+[July 13 2020](https://imgur.com/PNs4n4R)
+
+[July 10 2020](https://imgur.com/hnwyhJQ)
+
+[July 09 2020](https://imgur.com/kSfuecp)
+
+[July 08 2020](https://imgur.com/tCdNujw)
+
+[July 07 2020](https://imgur.com/C3gVjMD)
+
+[July 06 2020](https://imgur.com/LEgQRMC)
+
+[July 02 2020](https://imgur.com/fdhHfQ4)
+
+[July 01 2020](https://imgur.com/Cifb9W6)
+
+[June 30 2020](https://imgur.com/f1Rp3Sl)
+
+-[June 29 2020](https://imgur.com/70XOZlQ)
+
+[June 26 2020 | Up & Down](https://imgur.com/92vIXPk)
+
+[June 26 2020 | Normal](https://imgur.com/UTUWo4U)
+
+-[June 25 2020 | Up & Down](https://imgur.com/ZNoCyy1)
+
+-[June 25 2020  | Normal](https://imgur.com/JazTeo6)
+
+[June 24 2020 | Up & Down](https://imgur.com/ysDMesT)
+
+[June 24 2020 | Normal](https://imgur.com/VQGlKPa)
+
+-[June 23 2020 | Up & Down](https://imgur.com/fL9zgSg)
+
+-[June 23 2020  | Normal](https://imgur.com/ve74RkD)
+
+[June 22 2020 | Up & Down](https://imgur.com/1OmFEnZ)
+
+[June 22 2020 | Normal](https://imgur.com/jKJEW1M)
+
+-[June 19 2020 | Up & Down](https://imgur.com/Y3WjUwm)
+
+-[June 19 2020  | Normal](https://imgur.com/uwP3YvR)
+
+[June 18 2020 | Up & Down](https://imgur.com/9adSqKZ)
+
+[June 18 2020 | Normal](https://imgur.com/crZhaU7)
+
+-[June 17 2020 | Up & Down](https://imgur.com/G11ER0r)
+
+-[June 17 2020  | Normal](https://imgur.com/h4KdH5g)
+
+[June 16 2020 | Up & Down](https://imgur.com/TuLt1qI)
+
+[June 16 2020 | Normal](https://imgur.com/GCkQXSv)
+
+-[June 15 2020 | Up & Down](https://imgur.com/5QH2E55)
+
+-[June 15 2020  | Normal](https://imgur.com/C5JrWvu)
+
+[June 12 2020 | Up & Down](https://imgur.com/eBaICWI)
+
+[June 12 2020 | Normal](https://imgur.com/VYFZCx1)
+
+-[June 11 2020 | Up & Down](https://imgur.com/aAkQjqT)
+
+-[June 11 2020  | Normal](https://imgur.com/6Evjjj7)
+
+[June 10 2020 | Up & Down](https://imgur.com/8XU0uiK)
+
+[June 10 2020 | Normal](https://imgur.com/1lIndeA)
+
+-[June 09 2020 | Up & Down](https://imgur.com/BRLuyEW)
+
+-[June 09 2020  | Normal](https://imgur.com/JAy7coK)
+
+[June 08 2020 | Up & Down](https://imgur.com/xODZFSp)
+
+[June 08 2020 | Normal](https://imgur.com/DuTZfky)
+
+-[June 05 2020 | Up & Down](https://imgur.com/A9OUzjo) 
+
+-[June 05 2020  | Normal](https://imgur.com/uDi7DUg)
+
+[June 04 2020 | Up & Down](https://imgur.com/aO2gAXj)
+
+[June 04 2020 | Normal](https://imgur.com/q2OV3eG)
+
+-[June 03 2020 | Up & Down](https://imgur.com/RpmH9ZX)
+
+-[June 03 2020  | Normal](https://imgur.com/dLx0oTb)
+
+[June 02 2020 | Up & Down](https://imgur.com/5tWlJs7)
+
+[June 02 2020 | Normal](https://imgur.com/S9IsaCb)
+
+-[June 01 2020 | Up & Down](https://imgur.com/R0eX2kf)
+
+-[June 01 2020  | Normal](https://imgur.com/BOp3DBU)
+
+[May 29 2020 | Up & Down](https://imgur.com/iqmfy0r)
+
+[May 29 2020  | Normal](https://imgur.com/5FTawgl)
+
+-[May 28 2020 | Up & Down](https://imgur.com/u2hGszc)
+
+-[May 28 2020  | Normal](https://imgur.com/B9GyIxd)
+
+[May 27 2020 | Up & Down](https://imgur.com/mkliL4d)
+
+[May 27 2020  | Normal](https://imgur.com/EhndCgF)
+
+-[May 26 2020 | Up & Down](https://imgur.com/xKz9oLR)
+
+-[May 26 2020  | Normal](https://imgur.com/Wi5hGyy)
+
+[May 22 2020 | Up & Down](https://imgur.com/ZCW7qs5)
+
+[May 22 2020  | Normal](https://imgur.com/SspP5HE)
+
+-[May 21 2020 | Up & Down](https://imgur.com/7RxMGUP)
+
+-[May 21 2020  | Normal](https://imgur.com/sATPqyQ)
+
+[May 20 2020 | Up & Down](https://imgur.com/RcIb4hb)
+
+[May 20 2020  | Normal](https://imgur.com/pvun8Cd)
+
+-[May 19 2020 | Up & Down](https://imgur.com/0IXApi2)
+
+-[May 19 2020  | Normal](https://imgur.com/94JsBf9)
+
+[May 18 2020 | Up & Down](https://imgur.com/l8cSlq3)
+
+[May 18 2020  | Normal](https://imgur.com/uAiWhne)
+
+-[May 15 2020 | Up & Down](https://imgur.com/tLACg60)
+
+-[May 15 2020  | Normal](https://imgur.com/MoKPFDH)
+
+[May 14 2020 | Up & Down](https://imgur.com/C2wItAH)
+
+[May 14 2020  | Normal](https://imgur.com/oc1gv7c)
+
+-[May 13 2020 | Up & Down](https://imgur.com/uPWAJUJ)
+
+-[May 13 2020  | Normal](https://imgur.com/thbS9z4)
+
+[May 12 2020 | Up & Down](https://imgur.com/oS3sin0)
+
+[May 12 2020  | Normal](https://imgur.com/c2ec8fp)
+
+-[May 11 2020 | Up & Down](https://imgur.com/LGTp0fY)
+
+-[May 11 2020  | Normal](https://imgur.com/nB9QGTJ)
+
+[May 08 2020 | Up & Down](https://imgur.com/3M3KwsQ)
+
+[May 08 2020  | Normal](https://imgur.com/Mo9NZP9)
+
+-[May 07 2020 | Up & Down](https://imgur.com/k3xbDz0)
+
+-[May 07 2020  | Normal](https://imgur.com/a/1g1yD75)
+
+[May 06 2020 | Up & Down](https://imgur.com/OiaOhDz)
+
+[May 06 2020  | Normal](https://imgur.com/V2Q5aO7)
+
+-[May 05 2020 | Up & Down](https://imgur.com/CJx06gS)
+
+-[May 05 2020  | Normal](https://imgur.com/jKOCLOz)
+
+[May 04 2020 | Up & Down](https://imgur.com/3i68z3U)
+
+[May 04 2020  | Normal](https://imgur.com/T28cphE)
+
+-[May 01 2020 | Up & Down](https://imgur.com/3iDcXhF)
+
+-[May 01 2020  | Normal](https://imgur.com/WPKklFB)
+
+[April 30 2020 | Up & Down](https://imgur.com/y7EzeQk)
+
+[April 30 2020 | Normal](https://imgur.com/2nYd2SZ)
+
+-[April 29 2020 | Up & Down](https://imgur.com/dee3IRF)
+
+-[April 29 2020 | Normal](https://imgur.com/Z4X1CSz)
+
+[April 28 2020 | Up & Down](https://imgur.com/XsRm2Sx)
+
+[April 28 2020 | Normal](https://imgur.com/Zqp2S9k)
+
+-[April 27 2020 | Up & Down](https://imgur.com/FEvmmWr)
+
+-[April 27 2020 | Normal](https://imgur.com/vMwA14O)
+
+[April 24 2020 | Up & Down](https://imgur.com/FSfeOz1)
+
+[April 24 2020 | Normal](https://imgur.com/LHzxXdV)
+
+-[April 23 | Up & Down](https://imgur.com/BLa7MN5)
+
+-[April 23 2020 | Normal](https://imgur.com/V3J2jPd)
+
+[April 22 2020 | Up & Down](https://imgur.com/80z0FFk)
+
+[April 22 2020 | Normal](https://imgur.com/OQIY61f)
+
+-[April 21 2020 | Up & Down](https://imgur.com/5cYSqEg)
+
+-[April 21 2020 | Normal](https://imgur.com/7BxX7hV)
+
+[April 20th 2020 | Up & Down](https://imgur.com/r23wBRc)
+
+[April 20th 2020 | Normal](https://imgur.com/wjFxgs8)
+ 
+[April 17th 2020 | Up & Down](https://imgur.com/ZTMSSWi)
+
+[April 17th 2020 | Normal](https://imgur.com/odO82Cf)
+
+-[April 16th 2020 | Up & Down](https://imgur.com/POLCoXB)
+
+-[April 16th 2020 | Normal](https://imgur.com/zjTxNSZ)
+
+[April 15th 2020 | Up & Down](https://imgur.com/iHzJuEG)
+
+[April 15th 2020 | Normal](https://imgur.com/yslMwxs)
+
+-[April 14th 2020 | Up & Down](https://imgur.com/CfILR1I)
+
+-[April 14th 2020 | Normal](https://imgur.com/mTJx9pY)
+
+[April 13th 2020 | Up & Down](https://imgur.com/heUFkuE)
+
+[April 13th 2020 | Normal](https://imgur.com/xie9QaR)
+
+[April 9th 2020 | Up & Down](https://imgur.com/RFJdglJ)
+
+[April 9th 2020 | Normal](https://imgur.com/J4YcYSk)
+
+[April 8th 2020 | Up & Down](https://imgur.com/L823ms3)
+
+[April 8th 2020 | Normal](https://imgur.com/RNysb5U)
+
+[April 7th 2020 | Up & Down](https://imgur.com/vgghVc3)
+
+[April 7th 2020 | Normal](https://imgur.com/HwdomRI)
+
+[April 6th 2020 | Up & Down](https://imgur.com/fux5gVl)
+
+[April 6th 2020 | Normal](https://imgur.com/VXywIPn)
+
+[April 3rd 2020 | Up & Down](https://imgur.com/3C4vOGC)
+
+[April 3rd 2020 | Normal](https://imgur.com/bhENxG1)
+
+[April 2nd 2020 | Up & Down Zoomed In](https://imgur.com/diLcHzb)
+
+[April 2nd 2020 | Up & Down](https://imgur.com/DqaU5xL)
+
+[April 2nd 2020 | Normal](https://imgur.com/4BOYLzC)
+
+[April 1st 2020 | up or down test, read below](https://imgur.com/OO7E7ya)
+
+[April 1st 2020](https://imgur.com/iONgjB9)
+
+[March 31st 2020](https://imgur.com/tthfZ4a)
+
+-[March 30th 2020 | Less data, but recent data](https://imgur.com/a/NydpWnQ)
+
+-[March 30th 2020](https://imgur.com/FTv6noO)
+
+[March 27th 2020 | Less data, but recent data](https://imgur.com/e8bMPZ7)
+
+[March 27th 2020](https://imgur.com/tN4JKFC)
+
+-[March 26th 2020 | Less data, but recent data](https://imgur.com/jiCwqnT)
+
+-[March 26th 2020](https://imgur.com/NPuNArL)
+
+[March 25th 2020 | Less data, but recent data](https://imgur.com/ktgeqJX)
+
+[March 25th 2020](https://imgur.com/ktRa9Zi)
+
+-[March 24th 2020 | Less data, but recent data](https://imgur.com/Tb1UyEg)
+
+-[March 24th 2020](https://imgur.com/RQgxSe5)
+
+[March 23rd 2020 | Less data, but recent data](https://imgur.com/da5nnXo)
+
+[March 23rd 2020](https://imgur.com/5uxp5Cj)
+
+-[March 20th 2020 | Less data, but recent data](https://imgur.com/UouL22i)
+
+-[March 20th 2020](https://imgur.com/G0xy6wa)
+
+[March 19th 2020](https://imgur.com/Fn0eRgD)
+
+_____
+I am doing my best to get this this page archived at WayBackMachine and Archive.is so the results can be validated at a later date.
+
+Keep in mind I have no idea how the president's speeches or Fed stimulus will affect the results. We're on a wild ride.
+
+This is not financial advice.",DD,0.97
+SPY,flonmr,2020-03-20 05:23:34,Actual YOLO! 100 SPY 245c FD’s! Trying to go balls deep in a green witch!,[deleted],YOLO,0.97
+NYT,flloh1,2020-03-20 01:58:24,Government asks states to delay releasing employment numbers - NYT Breaking,"""Trump administration’s plea to states: Keep mum about unemployment stats.
+The Trump administration is asking state labor officials to delay releasing the precise number of unemployment claims they are fielding, an indication of how uneasy policymakers are about further roiling a stock market already plunging in response to the coronavirus outbreak.
+
+In an email sent Wednesday, the Labor Department instructed state officials to only “provide information using generalities to describe claims levels (very high, large increase)” until the department releases the total number of national claims next Thursday.
+
+The email, which was shared with The New York Times, noted that the reports were monitored closely by financial markets and should therefore remain embargoed. “States should not provide numeric values to the public,” wrote Gay Gilbert, the administrator of the department’s Office of Employment Insurance.""
+
+https://www.nytimes.com/2020/03/19/world/coronavirus-update-cases.html",Discussion,0.95
+BYND,flj5q7,2020-03-19 23:23:11,$BYND is actually meat,"I was at the supermarket today and they were limiting every person to 2 meat items. I added some $BYND products to my cart, thinking I could beat the system. Cashier told me I had to put some stuff back and I told her they didn't count because they weren't meat. She said they are meat. Everyone is going to find out soon and the crunchy people will be super pissed.
+
+$BYND 4/17 40p",Shitpost,0.98
+TDA,flhb0d,2020-03-19 21:37:05,I failed my portfolio margin call. Final damage before TDA liquidated my account.,"Final damage screenshot seconds before account was liquidated:  
+    
+https://i.imgur.com/e0sEWEm.jpg
+
+Thanks to me UPRO and TMF now are 50% stress tests on TOS, no margin reduction credit, and from 36% and 24% stress tests respectively. Or maybe I'm on reg-t when I took the screenshot, IDK and IDC. Talking with risk management apparently I flew under the radar as they didn't see a margin balance due to the box spread until other account alerts went off as customer service will take a look in when anyone is negative 1 million or more PnL as a courtesy to chat with their clients. Needless to say customer service was horrified and I got another margin phone call to wire in $1,250,000 in the next five minutes or they'd liquidate. I guess they give Portfolio Margin customers a little bit more leeway... 
+
+I took the five minutes to grab this one final screenshot. I'm hoping for some bailout money from coronavirus too. 
+
+I talked with the bankruptcy lawyer that set me up with the asset protection plan and he already dropped me as a client. I never imagined beer-virus would do this to me. 
+
+I'm gonna take some time to just not think about the virus or anything else. 
+
+# TL;DR what strike/put/call/etc
+
+I discovered a bug in my broker's risk management software. I guess buy RCL calls per my previous DD.
+
+Edit:
+Previous post entering the trade and proof of portfolio margin/etc:     
+https://www.reddit.com/r/wallstreetbets/comments/fepd4q/portfolio_margin_is_10x_worse_than_u1r0nymans_box/",Loss,0.99
+DD,flggb4,2020-03-19 20:49:42,DD - What happens during a triple/quad witching hour.,"I've downloaded historic DJI data to look at how these events have changed markets when they've occurred. Any questions you have you can ask in the comments and I'll try to answer (I'm pretty autistic though so take everything with a grain of salt).
+
+* A triple witching hour on average corresponds to a 90% increase in market volume.
+
+* A triple witching hour has only happened 15 times in a bear market since 1985. 
+
+* Those 15 times it has finished red 10 times with an average change of -0.53%. 
+
+* The biggest drop was -2.48% in June of 2000 and the biggest gain was 3.35% in September of 2009. 
+
+* A triple witching hour occurred 4 times during the Great Recession and it changed by +1.55%, -1.83%, +3.35%, and -0.30%.",DD,0.95
+UP,fldjwt,2020-03-19 18:06:22,PUTS ONLY GO UP,"Uber Ceo: ""I hAvE eN0uGh c@Sh t0 w3aTheR tHis cr1siS""
+
+Listen Uber already makes negative money and they are definitely bleeding money super hard for the next few months, maybe a year. Share-ride decline by 60-70% at areas most impacted and this is only the beginning. Uber went up 42% at peak today. Plenty of room to crash tomorrow. You think their food delivery is picking up the slack? Might as well call them corona distributor.
+
+In 2019,
+
+Uber's net income: -$8,506,000,000
+
+Uber's total cost and expenses: $22,743,000,000
+
+Uber's cash in hand: $10,873,000,000.
+
+And this doesn't include the loans Uber owe.
+
+&#x200B;
+
+tldr: Life savings on Uber puts $13 4/17",DD,0.96
+GO,fldjwt,2020-03-19 18:06:22,PUTS ONLY GO UP,"Uber Ceo: ""I hAvE eN0uGh c@Sh t0 w3aTheR tHis cr1siS""
+
+Listen Uber already makes negative money and they are definitely bleeding money super hard for the next few months, maybe a year. Share-ride decline by 60-70% at areas most impacted and this is only the beginning. Uber went up 42% at peak today. Plenty of room to crash tomorrow. You think their food delivery is picking up the slack? Might as well call them corona distributor.
+
+In 2019,
+
+Uber's net income: -$8,506,000,000
+
+Uber's total cost and expenses: $22,743,000,000
+
+Uber's cash in hand: $10,873,000,000.
+
+And this doesn't include the loans Uber owe.
+
+&#x200B;
+
+tldr: Life savings on Uber puts $13 4/17",DD,0.96
+SPY,flbbpv,2020-03-19 15:55:29,Why the impact in the USA will be MUCH worse than Italy and others. Impact on SPY,[deleted],DD,0.91
+USA,flbbpv,2020-03-19 15:55:29,Why the impact in the USA will be MUCH worse than Italy and others. Impact on SPY,[deleted],DD,0.91
+IMAX,flayp5,2020-03-19 15:32:21,$IMAX up 47% today - Time to MAX YOUR PROFITS WITH PUTS ON $IMAX,"There is no reason that this stock should be up this much today other than insider trading / stock buybacks. AIN'T NO ONE GOING TO THE MOVIE THEATER ANYTIME SOON.
+
+Buy puts while you can boys. BACK UP THE TRUCK.
+
+**My Positions**
+
+Puts I bought at the beginning of Corona:
+9/18 $19   https://imgur.com/a/dmrPxH8
+
+Puts I bought just now:
+06/19 $8 https://imgur.com/a/RfZ0NzN
+06/19 $7 https://imgur.com/a/eV4USYY",YOLO,0.94
+ON,flayp5,2020-03-19 15:32:21,$IMAX up 47% today - Time to MAX YOUR PROFITS WITH PUTS ON $IMAX,"There is no reason that this stock should be up this much today other than insider trading / stock buybacks. AIN'T NO ONE GOING TO THE MOVIE THEATER ANYTIME SOON.
+
+Buy puts while you can boys. BACK UP THE TRUCK.
+
+**My Positions**
+
+Puts I bought at the beginning of Corona:
+9/18 $19   https://imgur.com/a/dmrPxH8
+
+Puts I bought just now:
+06/19 $8 https://imgur.com/a/RfZ0NzN
+06/19 $7 https://imgur.com/a/eV4USYY",YOLO,0.94
+MAX,flayp5,2020-03-19 15:32:21,$IMAX up 47% today - Time to MAX YOUR PROFITS WITH PUTS ON $IMAX,"There is no reason that this stock should be up this much today other than insider trading / stock buybacks. AIN'T NO ONE GOING TO THE MOVIE THEATER ANYTIME SOON.
+
+Buy puts while you can boys. BACK UP THE TRUCK.
+
+**My Positions**
+
+Puts I bought at the beginning of Corona:
+9/18 $19   https://imgur.com/a/dmrPxH8
+
+Puts I bought just now:
+06/19 $8 https://imgur.com/a/RfZ0NzN
+06/19 $7 https://imgur.com/a/eV4USYY",YOLO,0.94
+DD,fl053j,2020-03-19 01:05:35,Fed is in the business of purchasing (indirectly) equities. Big DD inside,"*EDIT* To all the “Strikes or ban” dumbasses out there... if you’re too dumb to recognize the significance of what the Fed just did then giving you strikes won’t help you either. It’s flagged as DD, not YOLO or shitpost. Go figure it out your damn selves
+———————————————————
+
+I’m sure, at this point, you’re familiar w/ the term Quantitative Easing and what it means. 
+
+The Fed, as of last night, reopened the Primary Dealer Credit Facility. This facility takes in commercial paper and other interest rate related products and in exchange issues loans (now at a zero rate). Except they added one extra thing... very quietly...
+
+
+https://www.federalreserve.gov/newsevents/pressreleases/files/monetary20200317b1.pdf
+
+The Fed is prohibited from purchasing securities in the market. 
+
+However, that pdf is the 2020 release laying out the groundwork for the PDCF’s rules and guidelines. 
+
+They added EQUITIES to the list of things they can accept as collateral in exchange for issuing zero interest loans to companies. They backdoored their way into propping up the stock markets by being able to acquire stocks indirectly.
+
+
+Which means Starbucks, who started share buybacks up again today, can turn around and give the shares they bought back to the Fed, and receive a zero interest loan from the Fed.
+
+This is massive. This was NOT a part of the PDCF’s abilities in 2008. Basically, the PPT has found out how to go mainstream. It will take a bit for this to work it’s way into the system but it is out there.",DD,0.95
+SPY,fkywxs,2020-03-18 23:48:14,Buying SPY calls today wasn't a good idea,[deleted],Loss,0.97
+USD,fksz82,2020-03-18 18:05:21,Delta Airlines announces USD $2B Losses Ahead...,"8 minutes until the circuit-breaker un-trips and trading resumes.
+
+For the autists unable to visualize things (or the retards with Delta calls), here is an [interactive model](https://www.youtube.com/watch?v=RVEZSJt3dLo) of $DAL stock's next movements.",Shitpost,0.97
+AAL,fkrle0,2020-03-18 16:44:56,"AAL CEO says ""We can't let all the major airlines go bankrupt"". Wanna bet? 5/01 16p",,Shitpost,0.98
+CEO,fkrle0,2020-03-18 16:44:56,"AAL CEO says ""We can't let all the major airlines go bankrupt"". Wanna bet? 5/01 16p",,Shitpost,0.98
+ULTA,fkpv5a,2020-03-18 14:54:33,[DD] - $5k to $330k in 3 Weeks - $ULTA is my next move,"I’ve [made $325,000 in 3 weeks](https://imgur.com/gallery/ls15gX3).
+
+I called [Zillow ($Z), SeaWorld ($SEAS)](https://www.reddit.com/r/wallstreetbets/comments/fi03cg/dd_yes_you_can_buy_puts_on_zillow_z_right_now/?utm_source=share&amp;utm_medium=ios_app&amp;utm_name=iossmf), and many others over my time here. 
+
+Up until yesterday, I thought I was done. All the IV priced in... time to watch the world burn. 
+
+Until something pretty caught my eye on the way out the door. ULTA ($ULTA). 
+
+Would you believe it if I told you they have a market cap of $11B? And 1,124 stores?
+
+How do you think retail is going to fare over the next 1-2 years? How about a place that sells shit you can find on Amazon? 
+
+Retail dying is axiomatic at this point... how ULTA is still standing, at this valuation, after withdrawing guidance announcing the closure of all their stores, is beyond me. 
+
+I made a $40k bet, 4/17 $125 Puts at $9. 
+
+Proof in top link. I believe we will see sub-$100 in next couple weeks. 
+
+Best of luck everyone. And remember, stay safe, and just don’t dance.
+
+EDIT:
+
+For those of you claiming PnD, [I’m still here. ](https://imgur.com/gallery/Kpz3hFF) 💎🖐🏻 fellas.
+
+EDIT 2:
+
+Unlike my dad, [I’m not leaving you. ](https://imgur.com/gallery/OS5NRRS)
+
+Edit 3:
+
+This might fly in the face of Edit 2, but wanted to be transparent I’m at every step here. Holy shit Reddit, y’all are savages! You took an underlying equity that was $20 out of the money, and kissed it up to the strike, within a few hours. As any responsible trader should do, and in times of every increasing importance during a recession, I [halved my position](https://imgur.com/gallery/5H12SkX), moving from 40 to 20 contracts. I spent $36k on the play, cashed out $39k, and currently have $42k remaining that I am now riding out risk free. 
+
+Remember the saying... “Pigs get fat, Hogs get slaughtered”. If you’ve made more than 50% on your money today, there is no harm or shame in taking some off the table. If my prediction plays out and we get into double digits, I’ll have again, and ride out the rest until a $50-$75 range, should that happen. Best of luck everyone, and stay safe and smart out there!
+
+Edit 4:
+
+[We’ve made the news!](https://imgur.com/gallery/GkXyZq3)
+
+Edit 5:
+
+So it looks like circuit breakers may be triggered shortly in futures. If this holds, Thursday may be the capitulation day we’ve been dreading / waiting for. This may print some serious numbers, at the collective expense of our economy. Wild times fellas... God save the Queen.",DD,0.96
+A,fkppv5,2020-03-18 14:43:48,A Message from your german peers at r/mauerstrassenwetten: Germany will probably shutdown tomorrow. We have an insiderinformation from a government official.,[deleted],Discussion,0.95
+ALL,fkk8af,2020-03-18 06:12:20,"Gov orders all Nevada nonessential biz to close tonight at midnight (Yes, that means ALL casinos)","[https://www.fox5vegas.com/coronavirus/all-of-nevada-s-hotel-casinos-to-shut-down-per/article\_1762d600-67fc-11ea-8f29-9f3991ee8c8c.html](https://www.fox5vegas.com/coronavirus/all-of-nevada-s-hotel-casinos-to-shut-down-per/article_1762d600-67fc-11ea-8f29-9f3991ee8c8c.html)
+
+TLDR: Vegas is closed for 30 days starting Wed at noon.  GTFO.
+
+Wynn and MGM had said they were going to close before and the Cosmo announced yesterday but this is the big one.  I am still trying to find out when exactly is ""nonessential"".  But all the casinos and other large properties have to close.  Not sure how they plan to do that.  These hotels have a couple of hundred-thousand people in them at any time.  Sorry folks, get out, good luck finding a flight? WTF?
+
+Most casinos have stated that they will offer full pay and benefits for the full time of the shutdown.  All schools are already closed so at least it solves that issue.  All grocery stores and related establishments have been looted.  Good luck finding ammo and you can't buy a gun new because they can't get through to the feds for the background check.  Also, all exercise equipment is sold out.  I have no idea, don't ask.
+
+Yes, I'm a Vegas local and for full disclosure, I have Puts on CZR $4 for 4/3.   Et tu, Brute?  Oh hell yeah.
+
+EDIT: The new logo sucks ",DD,0.99
+ON,fkgksi,2020-03-18 01:43:54,"Looks like deflation's BACK ON THE MENU, BOYS!",,Shitpost,0.97
+SPY,fkfdli,2020-03-18 00:25:27,WSB_Autism rocking the $450k in SPY puts so I’m adding $800k SPY puts to the bet. Come back tomorrow.,"I got carried away today and bought a lot of SPY puts although they aren’t as autistic as u/WSB_Autism.  They are 🏳️‍🌈 and for May 1st, but OTM.
+
+https://imgur.com/a/0fKvNTb
+
+11:18 am Edit:  current profit on day $233k, current remaining positions, screenshot of max profit at open which I didn’t take https://imgur.com/a/PiYxNWY
+
+11:58 am edit:  chilling out before trump speaks ready to plunge again https://imgur.com/a/dqcOJtm
+
+1:41 am edit: closed out for the day about $273k so $200k+/- net. https://imgur.com/a/SYNQwjJ",YOLO,0.99
+YOLO,fkcq97,2020-03-17 21:44:44,$70k YOLO Puts using the money my mom left me after she passed away,"I grew up without a father and my mom had recently passed away due to cancer and left me with approx. $70k in savings.. I know it's a lot of money but I decided hell, if I'm really gonna turn my life around and pay for my last 2 years of college I need a lot more than that..
+
+I've decided to buy some YOLO puts today and hope for the best.. If this doesn't work out I'll just commit suicide or sth, idk.. Not that I have any family / relatives anyway so what gives.. Wish me luck! Diamond hands baby
+
+https://preview.redd.it/9rt5fdidoan41.jpg?width=1125&format=pjpg&auto=webp&s=6b15df6dbc308d336aca27e7bb86303b4538c7a9",YOLO,0.92
+DD,fkbrj3,2020-03-17 20:49:51,Dentist related DD inside,[deleted],DD,0.97
+TSLA,fkab53,2020-03-17 19:28:04,"TSLA not shutting down Fremont factory, Elon says virus fears overblown. Massive backfire potential",,DD,0.97
+GDP,fk6127,2020-03-17 15:19:48,"Goldman Sachs officially predicts a coronavirus-driven recession will hit the US, sees GDP shrinking 5% in 2nd quarter"," [https://markets.businessinsider.com/news/stocks/economic-recession-forecast-coronavirus-fuel-us-gdp-contraction-market-goldman-2020-3-1028999426](https://markets.businessinsider.com/news/stocks/economic-recession-forecast-coronavirus-fuel-us-gdp-contraction-market-goldman-2020-3-1028999426) 
+
+&#x200B;
+
+Get those puts ready!",Discussion,0.9
+OG,fk4ou1,2020-03-17 13:50:07,Petition to change our mascot back to the OG baby.,"SPY 3/25 $232p
+
+Fuck this new baby, he needs his goddamn ass pissing hair back! Just because we have 935994827663 new users that only comment asking what to buy/if they should sell doesn't mean we have to make them COMFORTABLE by changing the WSB baby to LOOK LIKE THEM! Go ahead, ban me.
+
+
+
+P.S. - u/stormwillpass I <3 u bb plz respond",,0.97
+PM,fk448k,2020-03-17 13:07:04,[WTS] Like new still in box 3/20 $200 MSFT Calls. $3.00 shipped. PM me.,"Bois have I got a deal for you. 
+
+Today! You can have yourself the highest quality calls on the market. 
+
+I'm sitting on a surplus of 3/20 MSFT $200 calls that I need to get rid of. Right now, YOU can get a stock of these awesome calls for the low low price of just $3.00/share.
+
+I can't do this all day, that's why when you buy a pack of 10, I will include a 3/20 $130 EXPE call FOR FREE! That's right, absolutely free just pay shipping and handling.
+
+But wait, THERE'S MORE!! Order within the next 30 minutes and you will receive one FREE 3/20 MOMO $35 call FOR FREE.
+
+Take advantage of this flash sale. These won't last all day so DON'T WAIT!!!
+
+To order, please put in 1 market order of the MSFT calls for my asking price and they will de swiftly delivered at 9:30am EST.
+
+DON'T WAIT!",Shitpost,0.98
+MSFT,fk448k,2020-03-17 13:07:04,[WTS] Like new still in box 3/20 $200 MSFT Calls. $3.00 shipped. PM me.,"Bois have I got a deal for you. 
+
+Today! You can have yourself the highest quality calls on the market. 
+
+I'm sitting on a surplus of 3/20 MSFT $200 calls that I need to get rid of. Right now, YOU can get a stock of these awesome calls for the low low price of just $3.00/share.
+
+I can't do this all day, that's why when you buy a pack of 10, I will include a 3/20 $130 EXPE call FOR FREE! That's right, absolutely free just pay shipping and handling.
+
+But wait, THERE'S MORE!! Order within the next 30 minutes and you will receive one FREE 3/20 MOMO $35 call FOR FREE.
+
+Take advantage of this flash sale. These won't last all day so DON'T WAIT!!!
+
+To order, please put in 1 market order of the MSFT calls for my asking price and they will de swiftly delivered at 9:30am EST.
+
+DON'T WAIT!",Shitpost,0.98
+SPY,fjrny1,2020-03-16 21:20:27,Update: SPY puts from the fire.,"[Current position s](https://imgur.com/a/NhOHjJS)
+
+Hey everyone! Thanks for all the concern and well wishes. The market is closed now so here's your update.
+
+We didn't quite get low enough to hit my $500k goal so I'm still in the market. Based on multiple comments I did take some profits so I'm playing with free money now. People may be interested to know that you can't pull more than $50,000 a day out of Robinhood so most of my fire insurance money still on the platform in cash.
+
+I also rolled out my options to reduce risk. Which is why this is flaired for Gain and not YOLO. 
+
+Again thank you so much for your tendies wishes, concern, and camaraderie. I'll update again when I sell. It's been one hell of a ride this weekend so now I'm going to have a drink and get my first sleep in 3 days.
+
+🌈🐻 May tendies rain down on you all!
+
+Edited to add link to original. [Original](https://www.reddit.com/r/wallstreetbets/comments/fi8jf7/holding_475_spy_330_220p_till_they_hit_500k/)",Gain,0.97
+DD,fjrjkt,2020-03-16 21:13:11,Some actual Tesla DD for you all (phone call with Tesla rep),[deleted],DD,0.95
+TDA,fjlmp3,2020-03-16 15:16:35,TDA fucked me with infinite debt,[deleted],Storytime,0.96
+A,fjjco2,2020-03-16 12:17:34,A Reminder That The Game Is Rigged,"Mohamed El-Erian just announced on CNBC that the markets are already having “technical issues”. He is saying that people will have issues selling and buying stocks and options. For how long? Who knows. 
+
+He went on to say that if there is a great amount of “health issues” with the market, they will most likely be closed. He didn’t elaborate on “health issues” so I assume it means that if there are too many “technical issues” this morning, they will be shut down. 
+
+There will prob be enough time for big money to cash out before a potential close. Never forget this game is rigged for the big dogs.....
+
+Edit: “Health Issues” was later expanded upon to be, “A market that is not healthy for people to operate in”. AKA a market where us peasants can cash out in.",Discussion,0.96
+SPY,fji06o,2020-03-16 10:04:23,SPY $245.80,,Meme,0.97
+CASH,fjbu9t,2020-03-16 01:34:14,"""DA CASH MACHINE GOES BRRRT"" - JPOW",,Shitpost,0.99
+CDC,fjbfpc,2020-03-16 01:07:42,CDC recommends no public online gatherings over 1 million people,,,0.98
+DD,fjb97s,2020-03-16 00:55:33,The WSB War: How Going Private Set Up An Engineered Distraction From Making The MM DD Disappear,"[Original DD Post ](https://www.reddit.com/r/autist/comments/fjbfyc/_/?utm_source=share&amp;amp;utm_medium=ios_app&amp;amp;utm_name=iossmf)
+
+One day after this is posted, one day before the biggest crash in history again, on the day we hit a million subs... all hell broke loose and the autists were flying around like wild locusts in Africa. 
+
+The sub is back but the OP u/Separate_Variation whole account is now gone... I think he pissed off some big boys somewhere, brought too much attention exposing them and something had to be done. In case something ever happens again, here; 
+
+[Archive of OP’s Acc](https://web.archive.org/web/20200313143830/https://www.reddit.com/user/Separate-Variation/)
+
+
+[Archive of WSB](https://webcache.googleusercontent.com/search?q=cache:ovX39fGJr80J:https://www.reddit.com/r/wallstreetbets/+&amp;amp;amp;cd=1&amp;amp;amp;hl=fr&amp;amp;amp;ct=clnk&amp;amp;amp;gl=ca)",,0.98
+YOU,fjb6jd,2020-03-16 00:50:51,FUCK YOU MODS,,Shitpost,0.88
+DOW,fjb3us,2020-03-16 00:46:07,DOW 20K PARTY!,,Shitpost,0.98
+P,fj7l5v,2020-03-15 21:07:25,"Goldman Sachs warns S &amp; P 500 might not bottom until 2,000",[deleted],DD,0.98
+S,fj7l5v,2020-03-15 21:07:25,"Goldman Sachs warns S &amp; P 500 might not bottom until 2,000",[deleted],DD,0.98
+SPY,fj1j3t,2020-03-15 14:45:28,"SPY puts for June at 105 strike, I will be wiping my autistic ass with the valueless money of the formerly rich.","Picked these puppies (edit: this one trash contract) up for 9$ a contract already up over 100% profit even with the bank bailout. Here's to hoping society falls apart so I can live in a paper mache castle made out of worthless dollar bills while I clean my ass with benjies. 
+
+Downvotes to the right and hate me in the comments.",Shitpost,0.94
+BYND,fipkmj,2020-03-14 22:08:26,Puts on BYND,,Shitpost,0.93
+NYC,fiovj2,2020-03-14 21:24:12,NYC area resident update,[deleted],Storytime,0.96
+TIL,fimwny,2020-03-14 19:25:04,WAIT TIL 3:55 to buy puts and buy calls 3 weeks out on record down days,[deleted],Discussion,0.97
+SPY,fil5fj,2020-03-14 17:37:26,This is it boys SPY $100p 3/16,,Discussion,0.96
+ET,fijyax,2020-03-14 16:21:36,GET POPCORN - Vice President Mike Pence to hold press conference on coronavirus response at noon ET,,Discussion,0.97
+DD,fiihfd,2020-03-14 14:38:23,We're not even close to the bottom. DD Inside,"My girlfriend and I went to our favorite restaurant yesterday one last time before the coronavirus takes over, and it wasn't even close to as busy as it normally is on a Friday evening. There was a table of six boomers pretty close to us that was yammering really loudly about something they saw on Fox News, when one of the women at the table spoke up and said something along the lines of, ""well there *is* good news!  My guy at Edward Jones - and he really knows what he's doing - said that if I have at least five thousand dollars, now's the time to put it into stocks!"" Her quinquagenarian  friends all gave agreeing coughs and sneezes.
+
+TL;DR: the normie boomers are being told to invest now. Buy SPY 3/31 240p.",,0.93
+SPY,fih1wk,2020-03-14 12:40:03,"How far the SPY could fall? Comparing to Italy, South Korea, Japan",[deleted],Shitpost,0.97
+A,fiboqw,2020-03-14 03:40:57,You All Are A Bunch of Rude Degenerates,"I want to thank the people of r/WSB who are responding to newb questions with vile and disgusting comments.  Even recommending they watch investing tutorials like [this. ](https://www.pornhub.com/video/search?search=tranny) 
+
+You’re doing gods work by getting rid of the idiots. 
+
+joking aside- I love you 🌈 retards. You are actually saving these people from losing money. If they can’t take a few minutes to even google the definitions of the words they’re trying to use they shouldn’t be fucking around with options. 
+
+The r/all influx, Bloomberg article, and market situation have driven people here looking to retire on a market-based lottery ticket.  
+
+Your vileness and autism is probably keeping a lot of people from throwing away their life savings.  
+
+Keep it up.  Go out there and be the top tier depraved degenerates I know you can be.   Every insult is saving someone’s life.
+
+EDIT: every one of these insults makes me PROUD AS FUCK of each you.  You never let a brother or sister down - even if they’re a retarded 🐂 or 🌈🐻.",Shitpost,0.95
+SPY,fi8jf7,2020-03-13 23:54:49,Holding 475 SPY 3/30 220P till they hit 500k.,"[Update for the curious](https://www.reddit.com/r/wallstreetbets/comments/fjrny1/update_spy_puts_from_the_fire/)
+
+
+Bought 35k worth just before Donnie announced his press conference. Doubled down, then doubled down again, then doubled that. Averaged from 7ish down to 4ish. Still down $100,000 at close. 
+
+This is the money I got from insurance paying me for all my possessions after my house burnt down. (Check post history.) So I'm basically trying for a reverse fire sale thing here. 
+
+[Positions](https://m.imgur.com/a/TAlAzvR)
+
+Anyway here's Wonderwall. 🌈🐻",YOLO,0.98
+SPY,fi76b1,2020-03-13 22:27:25,"SPY Calls $500 -&gt; $7,000 in 14 minutes","\+1400% thanks Papa Pump Trump. Was a 40 bagger at one point if i held for 60 more seconds. Sold out around SPY 269, contracts went to >$2 when SPY went over 270 at the close.
+
+https://preview.redd.it/er2kauc8oim41.png?width=718&format=png&auto=webp&s=5478ee9fa57ec48fec7c58f33d2ea89cdbcf6750
+
+EDIT: For you tards who don't understand expiration, yes I sold these before the close.
+
+EDIT: Fixed screenshot for readability.",Gain,0.97
+SPY,fi0nxh,2020-03-13 15:41:16,Buy SPY Puts,[deleted],Shitpost,0.94
+SPY,fhz461,2020-03-13 13:48:11,Buy SPY puts,[removed],Shitpost,0.92
+USA,fhuwj6,2020-03-13 06:47:29,USA will go in full quarantine in 1-2 weeks. 3 good sources telling me. BUY PUTS AND FOOD,"Save this to Remember me
+
+I have 3 really good sources from the gov telling me within 1-2 week the USA will go full quarantine for a minimum of 1 week. 
+
+Buy puts and go to the store and buy food you need 
+
+Stay safe out there boys ❤️",Storytime,0.89
+BUY,fhuwj6,2020-03-13 06:47:29,USA will go in full quarantine in 1-2 weeks. 3 good sources telling me. BUY PUTS AND FOOD,"Save this to Remember me
+
+I have 3 really good sources from the gov telling me within 1-2 week the USA will go full quarantine for a minimum of 1 week. 
+
+Buy puts and go to the store and buy food you need 
+
+Stay safe out there boys ❤️",Storytime,0.89
+WYNN,fhru9h,2020-03-13 02:42:00,"Thanks to my homie u/crackercider for recommending WYNN the other day, I threw in 100k just for him and turned it into a half mil! Gotta love when WSB works together!",,YOLO,0.96
+SPY,fhmxh5,2020-03-12 21:24:43,Closed my $1.6M SPY short after hours for a $355K gain in one month,,,0.99
+SPY,fhmkp4,2020-03-12 21:03:53,Sold 90 SPY contracts yesterday and 110 CCL puts and then bought calls. Instead of having 350k i now have 17k. proof in comments. please give me gold so i don’t kms,,Loss,0.93
+CCL,fhmkp4,2020-03-12 21:03:53,Sold 90 SPY contracts yesterday and 110 CCL puts and then bought calls. Instead of having 350k i now have 17k. proof in comments. please give me gold so i don’t kms,,Loss,0.93
+DIS,fhli79,2020-03-12 19:59:16,Hopefully not for long for all of us holding $DIS puts. They are exempt due to them being one of the largest employers in OC and having a better and more efficient crisis response than the state government of CA.,,Discussion,0.97
+OC,fhli79,2020-03-12 19:59:16,Hopefully not for long for all of us holding $DIS puts. They are exempt due to them being one of the largest employers in OC and having a better and more efficient crisis response than the state government of CA.,,Discussion,0.97
+A,fhkjhg,2020-03-12 19:00:10,"A month ago I had no idea what a long call option on an inverse ETF meant. Today, I still have no idea what that means. ($650 invested on 2/11)",[deleted],Gain,0.98
+YOLO,fhkiiv,2020-03-12 18:58:23,135K DISNEY PUTS - YOLO,[deleted],YOLO,0.99
+DOW,fhddc3,2020-03-12 09:56:48,FUTURES HALTED AS DOW FUTURES HITS -5%,"BREAKING NEWS: 
+
+Gents, the futures have been halted due to the breaker hitting -5%
+
+Imagine holding calls right now and not being able to sleep. It’s unbelievable. 
+
+Everyone say a quick prayer for our long-dead bull gang🌈🐃
+
+How long into the session do you think it will take to hit the first breaker at -7%??",Discussion,0.97
+YOLO,fh9jp3,2020-03-12 03:52:18,40K DISNEY PUT YOLO,[deleted],YOLO,0.97
+YOU,fh8nx5,2020-03-12 02:50:05,"Trump is requesting a stimulus that would be twice as big as Obama's during the 2008 crisis, but things are ok? BUY PUTS YOU AUTISTS!","Trump just put out an emergency corona virus address.
+
+He is requesting a stimulus ($900 billion) that would amount to 4% of 2020 GDP. Obama's stimulus during the 2008 crisis was around 2% of GDP (clarification: spread through 2009-2010, so it is the same magnitude within half the timeframe).
+
+How can things simultaneously be O.K. while also needing twice as much stimulus as the biggest financial crisis since the great depression? Wouldn't this be completely unprecedented in scale, aside from the 1930s New Deal measures and major war mobilizations?
+
+The stock market is going to the center of the earth.
+
+EDIT: Source for just the elimination of payroll taxes till the end of the year costing 900 billion dollars:  [https://foreignpolicy.com/2020/03/10/trump-economy-coronavirus-stcok-market-limited/](https://foreignpolicy.com/2020/03/10/trump-economy-coronavirus-stcok-market-limited/) 
+
+He also wants to bailout plenty of other shit.",Discussion,0.94
+BUY,fh8nx5,2020-03-12 02:50:05,"Trump is requesting a stimulus that would be twice as big as Obama's during the 2008 crisis, but things are ok? BUY PUTS YOU AUTISTS!","Trump just put out an emergency corona virus address.
+
+He is requesting a stimulus ($900 billion) that would amount to 4% of 2020 GDP. Obama's stimulus during the 2008 crisis was around 2% of GDP (clarification: spread through 2009-2010, so it is the same magnitude within half the timeframe).
+
+How can things simultaneously be O.K. while also needing twice as much stimulus as the biggest financial crisis since the great depression? Wouldn't this be completely unprecedented in scale, aside from the 1930s New Deal measures and major war mobilizations?
+
+The stock market is going to the center of the earth.
+
+EDIT: Source for just the elimination of payroll taxes till the end of the year costing 900 billion dollars:  [https://foreignpolicy.com/2020/03/10/trump-economy-coronavirus-stcok-market-limited/](https://foreignpolicy.com/2020/03/10/trump-economy-coronavirus-stcok-market-limited/) 
+
+He also wants to bailout plenty of other shit.",Discussion,0.94
+SPY,fh1ney,2020-03-11 19:18:28,Back with SPY predictions,"Disclaimer: I’m a degenerate who likes looking at graphs and has a gambling addiction (but made 50% return today)
+
+Hi yet again my fellow autists, as you can tell, my guess turned out to be correct and the market opened red today. This reinforces the trend and I will buy either calls or puts on SPY based on it before the closure today again.
+
+What happened yesterday: People were anticipating good news from Trump. Just like always he made himself an idiot (not surprising). Hence stonks went down.
+
+This graph shows a reoccurring trend that basically happens every day for quite some time now. We can see that if the market closes with a 15 min green candle, it will open a lot lower the next day and vice versa.
+
+This happens because we are in a very volatile market and people are scared to keep their stocks overnight. This means if the market is trending up at the end of the day people will be selling and if market is going down most see it as an opportunity. This results in the market going in the opposite direction on the next day opening.
+
+Additionally, if we end up breaking the 273 resistance today and close with a green candle (15 min), the chance of it being bloody tomorrow is very fucking high.
+
+[https:\/\/imgur.com\/a\/fmwjS9x](https://preview.redd.it/qyxzkcfcb3m41.png?width=2620&format=png&auto=webp&s=bf3dbb4108a3ffef3c51b13ae6317d735fee3efd)
+
+Id like to address a couple of comments from yesterday:
+
+For the retard who mentioned recency bias. The whole theory of trading is based on the idea that a trend is more likely to continue than stop. This is different from flipping a coin since the market fluctuations are caused my people's psychology, not mere chance.
+
+Changed the graph to the dark mode.
+
+Added new arrows which look better and coloured them with my crayons.
+
+&#x200B;
+
+TLDR for people with short attention span: If SPY is closing red, but calls. If SPY is closing green buy put.
+
+EDIT: This depends on the volume at the end of the day. This trend might not work if the volume is low last 30 minutes.
+
+EDIT 2: If we are closing with 3 green 15min candles and volume as high or higher as yesterday I'm spending all my miserable 900 on puts.
+
+EDIT 3: If last candle green, outs. If red, better wait!
+
+EDIT 4: these are confusing times, safer to wait until tomorrow
+
+LAST EDIT: I was trying to buy puts since it was green at the time, but thanks to RH it's still pending. What I think will happen is the market will open slightly lower tomorrow since the closure was so uncertain today.",Technicals,0.94
+DB,fh0vwl,2020-03-11 18:30:36,DB is absolutely fucked now that WHO says it's a pandemic,[deleted],Discussion,0.97
+NYT,fgtslj,2020-03-11 09:14:28,Confirmation by the NYT that the federal government has been deliberately blocking testing of the virus,,Discussion,0.95
+JUST,fgso02,2020-03-11 07:14:49,"""IT'S JUST THE FLU""",[removed],Storytime,0.94
+DIS,fgmqvm,2020-03-10 23:48:29,"I’ve been avoiding $DIS puts, saying “they’ll never close the American parks” but I’m relenting. They may not close but shit will hit the fan at this rate...",,DD,0.99
+SPY,fgm2ch,2020-03-10 23:06:23,SPY to 220 by March 20,"Just gonna start by saying i had to repost this cause you know who is gay.
+
+If you look at my post history you know what my play is and how I’m not to be fucked with. See what’s going on with Boeing? With VIX? How I called the bottom during the February free fall and the resistance top at 3125?
+
+Go ahead and take the opposite side of this trade and see how it works out.
+
+I AM GOING TO LINK TO THE TA I ALREADY DID AND POSTED CAUSE FUCKING MODS ARE SO FUCKING GAY.
+
+[https://www.reddit.com/r/wallstreetbets/comments/fe3ftg/vix\_play\_roadmapupdate/?utm\_source=share&utm\_medium=web2x](https://www.reddit.com/r/wallstreetbets/comments/fe3ftg/vix_play_roadmapupdate/?utm_source=share&utm_medium=web2x)
+
+IS THIS ENOUGH TA?
+
+[https://www.reddit.com/r/wallstreetbets/comments/fdo2db/vix\_futures\_and\_es\_preparing\_for\_08\_recital/?utm\_source=share&utm\_medium=web2x](https://www.reddit.com/r/wallstreetbets/comments/fdo2db/vix_futures_and_es_preparing_for_08_recital/?utm_source=share&utm_medium=web2x)
+
+FUCK GAY MODS.
+
+[https://www.reddit.com/r/wallstreetbets/comments/fbiff7/complete\_market\_analysis/?utm\_source=share&utm\_medium=web2x](https://www.reddit.com/r/wallstreetbets/comments/fbiff7/complete_market_analysis/?utm_source=share&utm_medium=web2x)
+
+I hope u/WallstreetBooyah is a bull.
+
+Long Dicks hold Long VIX.
+
+Gainz Porn incoming.
+
+Gonna squeeze in a little comment about how you should do your own fucking DD and not take positions based on random ppl on the internet. Despite my cockiness I always hedge and have an exit strategy. My trading style works by taking small positions with massive risk/reward of at least 20-30x minimum. I do get it wrong sometimes so please don’t be fucking betting your life savings on some shit I say, but it is true I have been killing it recently and I’m feeling good.",Technicals,0.96
+SPY,fgllk5,2020-03-10 22:38:12,$SPY Technical Analysis for the Noobs (Graph inside),"I am seeing a lot of retards that knows nothing about TA posting charts with random up and down arrows indicating where $SPY is heading for the upcoming weeks. STOP being a retard and listen up. 
+
+To get a good estimate of where $SPY will go you need to follow the below steps:
+
+1. Open yahoo finance and search for $SPY
+2. Run the 6 months graph
+3. Circle and identify the trend of the first month
+4. Indicate the upward/downward trend for the next 4 months
+5. Observe and circle the 6th month
+6. Identify the new trend with more arrows
+
+You should arrive at something like this: https://imgur.com/a/age2oSx
+
+This is how you do a fucking TA you retarded fucks
+
+Video Tutorial for the graph illiterates: https://www.youtube.com/watch?v=UbvfiZI2xnU
+
+TLDR:
+
+Short Term: $SPY 270 4/17 p Catch the bottom and slurp down your gains
+
+Long Term: Leap SPY call for next year",Technicals,0.98
+CDC,fgftjl,2020-03-10 16:46:20,CDC Director Says Containment Out Of Question For Parts Of US. US = Italy Soon," [https://www.bloomberg.com/news/articles/2020-03-09/travel-companies-pull-forecasts-italy-extends-ban-virus-update?srnd=premium-canada](https://www.bloomberg.com/news/articles/2020-03-09/travel-companies-pull-forecasts-italy-extends-ban-virus-update?srnd=premium-canada) 
+
+Direct copy and paste for those that got cock blocked by a gay ass paywall:
+
+ Controlling the coronavirus oubtreak in some parts of the U.S. is now beyond containment efforts, said Robert Redfield, director of the U.S. Centers for Disease Control and Prevention. More than 99 percent of new cases on Monday were from outside China, a sign that the focal point of the outbreak has shifted to Europe, he said.
+
+One of President Trump’s top coronavirus officials said there are more tests available than needed, a claim immediately disputed by New York Governor Andrew Cuomo. Markets erased earlier [gains](https://www.bloomberg.com/news/articles/2020-03-09/stock-rout-to-continue-in-asia-after-u-s-plunge-markets-wrap) as questions grew about the timing of U.S. economic stimulus.
+
+&#x200B;
+
+Tl;dr: Puts about to print money.",Discussion,0.98
+CCL,fg7mna,2020-03-10 04:35:48,Carnival CCL is doomed - here's the SEO data to show cancellations.,[deleted],DD,0.97
+SPY,fg6rai,2020-03-10 03:30:46,"$51 -&gt; $6.2k in 17 days. Mostly SPY yolos. Special thanks to Italy, the Saudis, and Robinhood diamond hands.",,Gain,0.98
+TASK,fg30zf,2020-03-09 23:17:40,"MIKE ""PRAY THE GAY VIRUS AWAY"" PENCE TASK FORCE WHITE HOUSE PRESS BRIEFING THREAD",[deleted],Discussion,0.89
+YOLO,ffz8ja,2020-03-09 19:28:30,"Low income 21 year old that started with $500. Took some out to fix my teeth and have an emergency fund, then the rest is to YOLO for a yacht",[deleted],Gain,0.97
+MINI,ffwdrm,2020-03-09 16:30:02,"MINI SHORT - Build a man a fire, and he'll be warm for a day. Set a man on fire, and he'll be warm for the rest of his life.",,Gain,0.98
+IS,ffvr5u,2020-03-09 15:48:14,WHERE IS THIS AUTIST? WE DEMAND ANSWERS.,,Storytime,0.98
+CPAC,ffnyn6,2020-03-09 03:46:53,Ted Cruz self quarantines after interacting with infected CPAC attendee.,,Discussion,0.97
+CEO,fe4i4z,2020-03-06 00:47:52,Hold on to your puts! “JPMorgan says CEO Jamie Dimon is recuperating after emergency heart surgery”,,Discussion,0.98
+YOLO,ffmv65,2020-03-09 02:26:15,YOLO on INO $200000,"&#x200B;
+
+[Well...picture explains it all I'm $200,000 in INO stock. I got bashed pretty hard by Discord lol, but I believe this deserved posting. I guess I am super Autisic after all...idk wtf I'm doing honestly...](https://preview.redd.it/u98vicjdujl41.png?width=1092&format=png&auto=webp&s=d06fdf61ffda7bfbdd73ae6489f37ca11b1e80e0)
+
+EDIT: INO up 50% TVIX up 80% LOL
+
+EDIT 2: It seems like out of desperation some salty short sellers went crying to Citron Research. Unfortunately I already locked in gains.
+
+https://preview.redd.it/prm8e4tg3ml41.jpg?width=395&format=pjpg&auto=webp&s=73b8c795b1fb6d561b5b5b24b269132b09b8c18b",YOLO,0.95
+INO,ffmv65,2020-03-09 02:26:15,YOLO on INO $200000,"&#x200B;
+
+[Well...picture explains it all I'm $200,000 in INO stock. I got bashed pretty hard by Discord lol, but I believe this deserved posting. I guess I am super Autisic after all...idk wtf I'm doing honestly...](https://preview.redd.it/u98vicjdujl41.png?width=1092&format=png&auto=webp&s=d06fdf61ffda7bfbdd73ae6489f37ca11b1e80e0)
+
+EDIT: INO up 50% TVIX up 80% LOL
+
+EDIT 2: It seems like out of desperation some salty short sellers went crying to Citron Research. Unfortunately I already locked in gains.
+
+https://preview.redd.it/prm8e4tg3ml41.jpg?width=395&format=pjpg&auto=webp&s=73b8c795b1fb6d561b5b5b24b269132b09b8c18b",YOLO,0.95
+ALL,ffivtr,2020-03-08 21:49:37,STATE DEPT: ALL AMERICAN SHOULD NOT CRUISE,">U.S. citizens, especially with underlying conditions, should not travel by cruise ship.  #CDC notes increased risk of #COVID19 on cruises. Many countries have implemented screening procedures, denied port entry rights to ships and prevented disembarking...
+
+
+https://twitter.com/TravelGov/status/1236739608794275846?s=20
+
+
+
+WOW RIP TRAVEL",Discussion,0.98
+DD,ffekso,2020-03-08 17:07:30,Delta Short DD,"I fly a lot. I am a million miler. 
+
+Monday morning first flight from ATL to EWR - half full. I have never seen an empty seat on this flight in 15 years. This is a consultant / auditor / sales flight. 
+
+Monday morning busiest airport in the world - not busy
+
+Friday afternoon EWR - ATL 3/4 of plane empty, the past 15 years this flight has never not been over booked. 
+
+EWR was still gross and looks like it has never been cleaned. 
+
+My company just travel banned everyone (month of March) We live in airplanes. Now I got to see my family, fucking gross.
+
+Edit for the retarded: The point is road warrior travel is being impacted. Road warriors flew through sept 11th, recession, swine flue, and SARS. Companies are stopping road warrior travel. This is a new reaction to a black swan event.",,0.96
+DD,ffdrz0,2020-03-08 16:10:03,COVID DD,"If you're not in bear gang, it's not too late to join, and I suggest you do so promptly because shits about to hit the fan frens. That being said, I plan on riding the ""V"" down and up on this one, and lastly, if you're a perma bull you're in luck I've got some companies at the bottom that I think will go up over the next few months.
+
+**What's about to happen:**
+
+Let's stick to the facts and correlate this puppy to a similar outbreak; H1N1: ""*From April 12, 2009 to April 10, 2010, CDC estimated there were 60.8 million cases (range: 43.3-89.3 million), 274,304 hospitalizations (range: 195,086-402,719), and 12,469 deaths (range: 8868-18,306) in the United States due to the (H1N1)pdm09 virus... Additionally, CDC estimated that 151,700-575,400 people worldwide died from (H1N1)pdm09 virus infection during the first year the virus circulated* "" [\[1\]](https://www.cdc.gov/flu/pandemic-resources/2009-h1n1-pandemic.html)
+
+Since H1N1 got memory holed and everybody forgot about it, the virus became a modern flu, we have flu shots for this thing and chances are you've probably had it at one point or another -- it's just one of the flues that floats around each season. But the Corona is different...
+
+First off, this thing already has a reproduction rate higher than any of the previous outbreaks in the last 150 years [\[3\]](https://en.wikipedia.org/wiki/Template:Notable_flu_pandemics). AND it's one of the most deadly -- however only to certain age groups which is a big difference [\[4\]](https://www.worldometers.info/coronavirus/coronavirus-age-sex-demographics/). Now I do want to make it clear that the Spanish Flu was a lot deadlier to healthy adults, also the age demographics have changed. StatsCanada actually has a good tool that shows the population pyramid and you can compare Spanish Flu in 1918 to 2020 and it'll have some similar-ish results to the USA [\[5\]](https://www12.statcan.gc.ca/census-recensement/2016/dp-pd/pyramid/pyramid.cfm?type=1&geo1=01). There's also population pyramid tool here for the USA but it only goes back to 1950 [\[6\]](https://www.populationpyramid.net/united-states-of-america/2020/).
+
+Buddy of mine with access to a Bloomberg terminal sent this to me the other day which tracks the spread of the Corona virus [\[7\]](https://imgur.com/a/O4J6cuc). Think the code is 'Map Virus' or something. What matters is that we can see a very obvious trend of exponential growth, in fact that's how you model these things... This thing will spread like wildfire once it starts to hit the cities in America, and... already has. [All it takes is one 'chad spreader'](https://imgur.com/a/N542fqR) to jump on the subway and it'll be a matter of weeks and the entire city is infected. In fact it's already happened in Toronto so buy puts on $CANADA [\[8\]](https://www.theglobeandmail.com/canada/toronto/article-toronto-man-diagnosed-with-covid-19-used-local-transit-for-three-days/).
+
+What matters is that we can see that something like \~60.8 million people who got H1N1 in the USA from 2009 to 2010 and this thing had an r0 of only like \~1.5ish. The bat soup virus currently has an estimated r0 at \~2.4 right now, mind you this is a number that varies through time and can decrease by human intervention (such as quarantines of cities), which will inevitably transpire...
+
+If we assume that this thing spreads with even some level of similarity to H1N1 in 2009, this is going to be a bloodbath for the boomers. First and foremost, this will spread at a much higher rate among boomers and those in old folks homes, we've got evidence of that already [\[9\]](https://www.fox19.com/2020/03/07/coronavirus-concerns-stalls-cruise-ship-off-california/).
+
+But that's not all. Italy is fucked. They just announced a quarantine of 1/4 of their fucking population [\[10\]](https://www.theguardian.com/world/live/2020/mar/08/coronavirus-live-updates-third-death-in-australia-as-cases-reach-more-than-70). Take wild guess how that's going to fare for their economy. The FTSE MIB is down shy of 20% from it's highs as it stands right now and its only going to get worse [\[11\]](https://www.marketwatch.com/investing/index/i945?countrycode=it). Given that the Italy  is basically a leading indicator of what's going to happen in the USA...  I fucking DARE YOU to buy spy calls.
+
+So let's get to the nuts and bolts of this. Some autist named Dr. James Lawler stated that worst case scenario this thing could infect 96m in the USA and kill 480,000 people [\[12\]](https://www.independent.co.uk/news/world/americas/coronavirus-dr-james-lawler-warning-us-hospitals-infection-a9385031.html). However, funny enough his estimates are based on a mortality rate of 0.5%. The current mortality rate is \~3.5% so, rather, we could be looking at up to 3,360,000 dying in the USA if the mortality rate is what it currently is.
+
+However, we can math this based on the population pyramids I posted above. In the USA if we take the known mortality rates and population pyramid and transpose that on the worst case scenario, we're looking at shy 1.9m dead (mostly older people) given that 30% get the virus in the next year [\[13\]](https://imgur.com/a/vfOz0Nf). If this spreads at the same rate as H1N1, then we're looking at a total of \~60.8 million infected in a year's time. This corresponds to \~18.6% of the population getting it and would result in \~1.16m people dead [\[14\]](https://imgur.com/a/WUDaMza).
+
+Now, I'm willing to bet that my boy Donnie isn't interested in losing a massive chunk of his voting block so I'm betting that we see quarantines very soon in the USA, entire cities shut down just like we've seen in China and just like we've seen in Italy and Iran. It's going to happen and when it does, the lemmings will be shocked. I mean, this shouldn't come as a surprise, there's already runs on toilet paper in Australia over this thing [\[15\]](https://www.aljazeera.com/news/2020/03/australians-scrap-toilet-rolls-coronavirus-panic-buying-200308014116516.html).
+
+Anyways, I think we'll get a cure eventually and that everybody reading this will be fine, in fact I'm not a doomer whatsoever. Society will continue on and SPY will eventually recover and I'll join bull gang again, but I'm sure Monday will be a bloodbath after Italy quarantined like 16 million people.
+
+But back to my point, just think about what'll happen to SPY when a US city announces a quarantine. They're already preparing for it by declaring states of emergency now [\[16\]](https://www.governor.ny.gov/news/no-202-declaring-disaster-emergency-state-new-york). The fear will be real and it already is...
+
+**EDIT:** Figured I'd add a bit more on Canada as I don't think it's priced in up there quite yet. Again, I took some numbers from StatsCanada [\[17\]](https://www150.statcan.gc.ca/n1/pub/91-520-x/2010001/t334-eng.htm) and plugged them in against current known mortality rates and we ended up with this [\[18\]](https://imgur.com/a/YBX7XFV). Estimated 234k dead which... is bad, but that's a flood of dead people in a short amount of time. Also I assume a 30% infection rate but I think this things going to have a much high infection rate because of the fact that we corral all our old into old folks homes... it just takes one sick caretaker and they've all got it and the worst part is that you can have it and spread it without even knowing [\[19\]](https://www.businessinsider.com/coronavirus-asymptomatic-transmission-chinese-woman-relatives-2020-2). So this basically becomes a catch-22. If elderly care takers don't show up to work because they're sick, elderly people die, if they do show up, there's a chance they're giving them COVID-19, it just takes one and they'll all catch it... real morbid stuff. Basically each old folks home is a tranche in a CDO for the few of you retards that know what I'm talking about...
+
+So how do we profiteer from this? And what will inevitably transpire?
+
+**EDIT 2:** [SPX e-minis currently trading at shy of -5%... we're hitting the circuit breakers tomorrow. Fed will drop rates again by end of week.](https://www.marketwatch.com/investing/future/es00)
+
+**Conclusion:**
+
+I know half of you retards skipped to here but kudos to the champions that read everything I wrote.
+
+1. General stock market decline, puts on $SPY or high beta stocks if IV isn't too high
+2. for my perma-bull frens, calls on funeral home and burial companies: $SCI, $CSV, $MATW, $PLC:CA, $DTY:UK, etc. **EDIT:** (as u/dollarsandcents101 pointed out be careful on funeral homes... could ban funerals if this thing really get's going)
+3. Puts on old folks care homes because those are probably going to be vacant here very shortly and thus less cash flows to investors... stocks like: $WELL, $VTR $OHI, **EDIT:** $CSH.UN:CA (Canadian, option chain is a lot less liquid than USA so... be careful), SIA:CA (another one, already crashing, has options, less liquid though)
+4. I'm still bearish airlines and travel... I mean go look at the chart of $AAL. After 9/11 that stock went from $40 a share to literally $2 a share... in 2003. The same thing happened during the GFC, stock again went from over $40 a share to a fucking penny stock -- traded at like $0.30 per share. Get ready for round 3... I look forward to buying calls on airlines after this is all over.
+5. bearish any developing country/emerging market ETF's. They're going to get hit hard.
+6. I don't know anything about medical or medical research stocks but calls and puts on companies researching corona virus cure. Again... correct me if I'm wrong but to my understanding it's zero-sum, the company that gets a solid cure makes bank and the rest are fucked but again idk this isn't my area whatsoever. Also looks like a lot of these stocks are rocketing and IV is massive so I'm sitting on the sidelines on this one
+
+If you're from r/all wanting to get in on the tendies, I saved a special one just for you! Go all in on $LVS 80C 3/13 calls, trust me. Cannot go tits up.",DD,0.96
+DD,ffd6cz,2020-03-08 15:24:14,OIL CRASH OF 2020 - DD,"Morning fellow autists, i would like to share a few of my thoughts about what going on in the oil market and how you can maybe, just maybe make a dollar (some of you may lose a dollar).
+
+**The following news  released since Fridays OPEC failed meeting:**
+
+[https://www.cnbc.com/2020/03/06/opec-meeting-coronavirus-weighs-on-oil-demand-as-oil-prices-fall.html](https://www.cnbc.com/2020/03/06/opec-meeting-coronavirus-weighs-on-oil-demand-as-oil-prices-fall.html)
+
+&#x200B;
+
+**Some key points from the article are as follows:**
+
+\- OPEC and non-OPEC allies failed on Friday to agree on how much oil production to cut amid the coronavirus outbreak
+
+\- Russia reportedly refusing to give the green light to the deepest supply cuts since the global financial crisis.
+
+\- Russian Energy Minister Alexander Novak told reporters leaving the meetings in Vienna on Friday that it meant that members could now pump what they liked starting April 1
+
+\- “We have no reason to doubt the continued commitment of the Russian Federation to this partnership,” OPEC Secretary General Mohammed Barkindo told reporters.  **(this we know can be taken with a grain of salt and a shot of tequila.)**
+
+THEN! this happened:
+
+[https://www.bloomberg.com/news/articles/2020-03-07/saudi-aramco-slashes-crude-prices-kicking-off-price-war](https://www.bloomberg.com/news/articles/2020-03-07/saudi-aramco-slashes-crude-prices-kicking-off-price-war)
+
+Some points from the article:
+
+\-Saudi Arabia kicked off an all-out oil war on Saturday slashing official pricing for its crude and making the deepest cuts in at least 20 years on its main grades, in a bid to push as many barrels into the market as possible
+
+&#x200B;
+
+https://preview.redd.it/i7z0hr6figl41.png?width=620&format=png&auto=webp&s=1adee29cfbf398eec4c0f7b2e662599a8791c06c
+
+\- The collapse of the meeting between the Organization of Petroleum Exporting Countries and its erstwhile partners effectively ends the cooperation between the Saudis and Russia that has underpinned oil prices since 2016.
+
+\- Unshackled from the cartel’s restrictions and with budget holes to fill, there is every chance producers will ramp up output.
+
+\- Saudi Arabia pumped 9.7 million barrels a day last month, but with the agreement on output cuts expiring at the end of March, the kingdom will be free to produce as much as it wants. The Saudis say they can pump as much as 12.5 million barrels a day.
+
+*- Aramco slashed its official selling price for flagship Arab Light crude to buyers in Asia by $6 a barrel, to a discount of $3.10 below the Middle East benchmark. The cuts eclipsed the $1.90 reduction expected by traders and refiners. It also reduced Medium crude to Asia by $6 a barrel, dropping the grade to a $4.05 discount, according to the company’s pricing sheet.* ***(VERY IMPORTANT)***
+
+***Looking into the future:***
+
+***We are about to enter an OIL glut:***
+
+https://preview.redd.it/xq3wldkxngl41.png?width=753&format=png&auto=webp&s=03365a3125a374059dcea1f5cb50a6c13b0fde49
+
+So now let's look at some charts and some resistance and support levels for Crude:
+
+&#x200B;
+
+[Crude Oil Monthly Chart](https://preview.redd.it/sfm77hwqjgl41.png?width=1564&format=png&auto=webp&s=70257980916fd62d6fbfa0c7db5e40f6f891459e)
+
+&#x200B;
+
+As you can see on the monthly chart, oversold conditions haven't been encountered in over 5 years. Since our large sell off and we are approaching the $30/Barrel price. I expect the price to dip below 30 to $20-$25 before support can be found. (This is news dependent as things could change).
+
+Our Next Support is $20 Dollars
+
+Look for Puts in /CL Futures which provide a good cheap way to enter options contracts or any stocks ETF's ETNS or banks that are oil heavy in portfolio.
+
+The coronavirus will shut down major cruise ships and airplane travel also pushing prices down.
+
+ 
+
+POSITON: 10 Put Contracts APRIL 20th 2020 30 STRIKE
+
+[https://i.imgur.com/dnoMTOj.png](https://i.imgur.com/dnoMTOj.png)
+
+&#x200B;
+
+https://preview.redd.it/6muk9f9dkgl41.png?width=1250&format=png&auto=webp&s=b905ceae0471b664d637bb0f6164afcaae82e7aa",DD,0.98
+OIL,ffd6cz,2020-03-08 15:24:14,OIL CRASH OF 2020 - DD,"Morning fellow autists, i would like to share a few of my thoughts about what going on in the oil market and how you can maybe, just maybe make a dollar (some of you may lose a dollar).
+
+**The following news  released since Fridays OPEC failed meeting:**
+
+[https://www.cnbc.com/2020/03/06/opec-meeting-coronavirus-weighs-on-oil-demand-as-oil-prices-fall.html](https://www.cnbc.com/2020/03/06/opec-meeting-coronavirus-weighs-on-oil-demand-as-oil-prices-fall.html)
+
+&#x200B;
+
+**Some key points from the article are as follows:**
+
+\- OPEC and non-OPEC allies failed on Friday to agree on how much oil production to cut amid the coronavirus outbreak
+
+\- Russia reportedly refusing to give the green light to the deepest supply cuts since the global financial crisis.
+
+\- Russian Energy Minister Alexander Novak told reporters leaving the meetings in Vienna on Friday that it meant that members could now pump what they liked starting April 1
+
+\- “We have no reason to doubt the continued commitment of the Russian Federation to this partnership,” OPEC Secretary General Mohammed Barkindo told reporters.  **(this we know can be taken with a grain of salt and a shot of tequila.)**
+
+THEN! this happened:
+
+[https://www.bloomberg.com/news/articles/2020-03-07/saudi-aramco-slashes-crude-prices-kicking-off-price-war](https://www.bloomberg.com/news/articles/2020-03-07/saudi-aramco-slashes-crude-prices-kicking-off-price-war)
+
+Some points from the article:
+
+\-Saudi Arabia kicked off an all-out oil war on Saturday slashing official pricing for its crude and making the deepest cuts in at least 20 years on its main grades, in a bid to push as many barrels into the market as possible
+
+&#x200B;
+
+https://preview.redd.it/i7z0hr6figl41.png?width=620&format=png&auto=webp&s=1adee29cfbf398eec4c0f7b2e662599a8791c06c
+
+\- The collapse of the meeting between the Organization of Petroleum Exporting Countries and its erstwhile partners effectively ends the cooperation between the Saudis and Russia that has underpinned oil prices since 2016.
+
+\- Unshackled from the cartel’s restrictions and with budget holes to fill, there is every chance producers will ramp up output.
+
+\- Saudi Arabia pumped 9.7 million barrels a day last month, but with the agreement on output cuts expiring at the end of March, the kingdom will be free to produce as much as it wants. The Saudis say they can pump as much as 12.5 million barrels a day.
+
+*- Aramco slashed its official selling price for flagship Arab Light crude to buyers in Asia by $6 a barrel, to a discount of $3.10 below the Middle East benchmark. The cuts eclipsed the $1.90 reduction expected by traders and refiners. It also reduced Medium crude to Asia by $6 a barrel, dropping the grade to a $4.05 discount, according to the company’s pricing sheet.* ***(VERY IMPORTANT)***
+
+***Looking into the future:***
+
+***We are about to enter an OIL glut:***
+
+https://preview.redd.it/xq3wldkxngl41.png?width=753&format=png&auto=webp&s=03365a3125a374059dcea1f5cb50a6c13b0fde49
+
+So now let's look at some charts and some resistance and support levels for Crude:
+
+&#x200B;
+
+[Crude Oil Monthly Chart](https://preview.redd.it/sfm77hwqjgl41.png?width=1564&format=png&auto=webp&s=70257980916fd62d6fbfa0c7db5e40f6f891459e)
+
+&#x200B;
+
+As you can see on the monthly chart, oversold conditions haven't been encountered in over 5 years. Since our large sell off and we are approaching the $30/Barrel price. I expect the price to dip below 30 to $20-$25 before support can be found. (This is news dependent as things could change).
+
+Our Next Support is $20 Dollars
+
+Look for Puts in /CL Futures which provide a good cheap way to enter options contracts or any stocks ETF's ETNS or banks that are oil heavy in portfolio.
+
+The coronavirus will shut down major cruise ships and airplane travel also pushing prices down.
+
+ 
+
+POSITON: 10 Put Contracts APRIL 20th 2020 30 STRIKE
+
+[https://i.imgur.com/dnoMTOj.png](https://i.imgur.com/dnoMTOj.png)
+
+&#x200B;
+
+https://preview.redd.it/6muk9f9dkgl41.png?width=1250&format=png&auto=webp&s=b905ceae0471b664d637bb0f6164afcaae82e7aa",DD,0.98
+REAL,ffc3k1,2020-03-08 13:49:01,Let an oldster tell you what it was like dealing with a REAL challenge - the financial crisis.,[deleted],Satire,0.96
+DD,ff1zjn,2020-03-07 22:36:33,Here’s some actual DD for you idiots,[removed],,0.95
+IS,feqk9p,2020-03-07 06:11:10,Costco no longer providing free samples. SHUT IT THE FUCK DOWN THIS IS A CRISIS,"Mom will be less likely to go to Costco, mom buys tendies at fucking costco.
+
+NO COSTCO MEANS NO FUCKING TENDIES
+
+ [https://www.usatoday.com/story/money/food/2020/03/06/costco-samples-coronavirus-suspends-free-samples/4980216002/](https://www.usatoday.com/story/money/food/2020/03/06/costco-samples-coronavirus-suspends-free-samples/4980216002/)",Shitpost,0.98
+IT,feqk9p,2020-03-07 06:11:10,Costco no longer providing free samples. SHUT IT THE FUCK DOWN THIS IS A CRISIS,"Mom will be less likely to go to Costco, mom buys tendies at fucking costco.
+
+NO COSTCO MEANS NO FUCKING TENDIES
+
+ [https://www.usatoday.com/story/money/food/2020/03/06/costco-samples-coronavirus-suspends-free-samples/4980216002/](https://www.usatoday.com/story/money/food/2020/03/06/costco-samples-coronavirus-suspends-free-samples/4980216002/)",Shitpost,0.98
+A,feqk9p,2020-03-07 06:11:10,Costco no longer providing free samples. SHUT IT THE FUCK DOWN THIS IS A CRISIS,"Mom will be less likely to go to Costco, mom buys tendies at fucking costco.
+
+NO COSTCO MEANS NO FUCKING TENDIES
+
+ [https://www.usatoday.com/story/money/food/2020/03/06/costco-samples-coronavirus-suspends-free-samples/4980216002/](https://www.usatoday.com/story/money/food/2020/03/06/costco-samples-coronavirus-suspends-free-samples/4980216002/)",Shitpost,0.98
+RCL,fehkg7,2020-03-06 19:14:35,Gain: I accidently bought 100 RCL call options yesterday and sold for $2.7K gain today,"This is my first post on this subreddit. I never posted here because I thought I was a normie and didn't want to come off condescending to all you autists. Turns out I was one of you all along.
+
+Yesterday I put in a buy order for 10 RCL call option for $910 before market close thinking this was a good time to start building a long position for the eventual bounce, and average down if the stock price kept going down. I quickly realized I put in a buy order for 100 options instead of 10 totaling $9,100! I was in PDT restriction so I could not sell.
+I decided I was going to hold and pray for the stock price to bounce up the next day.
+ 
+I woke up this morning and saw the stock price was down almost 5% and accepted my fate of sinking with the ship. My mistake resulted in a $2000 unrealized loss. Fortunately, a few minutes after market opened, RCL stock price jumped up from -5% to +3% where I was able to sell my position for a $2700 gain. 
+
+[screenshot](https://imgur.com/a/YD9a20l)
+
+Stay safe out there.",Gain,0.97
+SPY,feh03k,2020-03-06 18:38:25,SPY 300 - The Bear Market,,Shitpost,0.92
+SPY,feffbn,2020-03-06 16:55:53,Today's discussion in the shape of $SPY this month,,Discussion,0.98
+DIA,feebp8,2020-03-06 15:37:10,For those that called me a boomer for trading DIA,,Gain,0.97
+DD,fe322u,2020-03-05 23:07:49,Kanye West is an active member of WSB and partakes in market trading. DD inside,"Kanye West has released many songs, but back in 2016, he released Life of Pablo. Namely, Pt.2 - A song he made after having joined this subreddit and being inspired. Here's the DD
+
+""Up in the morning"" - This in reference to market open. Kanye lives in Los Angeles so he has to be up from 6:30 AM.
+
+""Miss you bad"" - Talking about all the money he deposited and lost in his RH account. 
+
+""Sorry I ain't called you back"" - Margin called...
+
+""Same problem my father had"" - Kanye's father was a gambler and professional autist, and Kanye decided to take after his father's footsteps
+
+""All his time, all he had, all he had, in what he dreamed"" - Time is referring to THETA fucking him in the ass. He dreamt of having all that he had but he woke up to 0.69c value.
+
+""All his cash, Market crashed"" - Kanye predicted the market crash this year from back in 2016. He knew about beer flu coming into town and knew this shits going down
+
+""Hurt him bad"" - The government tortured him into not telling us about it
+
+""People get divorced for that"" - Referring to Kim showing us her baboon butt
+
+""Drop some stacks, pops is good"" - This is the cycle of the autist. He thinks if he can pour some more money in, the next contract has to make me rich
+
+""Momma pass in Hollywood, if you ask, lost my soul"" - Kanye is clearly less coherent than we even predicted here 
+
+""Driving fast, lost control"" - Kanye comes back to his senses here and is speaking in reference to $SPCE. $SPCE was mooning driving so fast to get there, then lost control and fucking landed in the gutters.
+
+""Off the road, jaw was broke"" - Broken jaw helped with blowjobs to make up for the lost money in the market
+
+""Member we all was broke"" - Final step of denial, acceptance. Accepting that you'll never get rich in this market
+
+""Member I'm coming back, I'll be taking all the stacks"" - Back to the first step of the loop, THIS contract HAS to make me rich. 
+
+Thank you all for cuming to my Autist Talk",Shitpost,0.85
+GDP,fe01nt,2020-03-05 19:56:43,Coronavirus: Australian experts predict $2.4 trillion global GDP loss,,Discussion,0.98
+SPY,fdwhee,2020-03-05 16:03:45,Wasn't there a guy who shorted SPY $2 Million?,"For anyone who's been here longer than a month-
+
+There was a guy who shorted like $2 million worth of SPY right at the top and everyone called him a big ole retard. Mister, are you still out there? Can you take a break from having sex with our mothers to post your gains?
+
+This was months ago but I remember a guy went 1.5 million long on gold.
+
+Also, there was a dude who bought 1,000 puts on AAL for an April strike at 22.50. Where the fuck are you? Can you buy me something?
+
+Anyways, I just put about 5K into credit call spreads and puts on SPY so it's going to go back up. This is a warning for all of you to sell. Sorry.
+
+Edit: 35 304/305 Credit Call spreads expiring tomorrow. 302 Puts expiring tomorrow, and 290 puts expiring next Friday.",Discussion,0.98
+A,fdnecg,2020-03-05 02:18:29,A 20-bag in 8 trading days (4k to 84k),"Story: rode the bull market up from 8k to 24k, then promptly lost 20k of that due to freaking Italy and the beer virus (you can see all these posts from [my history](https://www.reddit.com/r/wallstreetbets/comments/f7cdib/in_order_to_recover_my_losses_i_am_doing_my_first/)) with a [misguided AMD $70c 3/20](https://www.reddit.com/r/wallstreetbets/comments/f6dhhf/for_anyone_who_missed_the_memo_this_is_the_way/) YOLO and subsequent [QQQ $244 2/24 YOLO](https://www.reddit.com/r/wallstreetbets/comments/f7fgab/how_my_yolo_is_doing_so_far/).
+
+[https://imgur.com/KBsKHHv](https://imgur.com/KBsKHHv)
+
+[https://imgur.com/d8YH7IL](https://imgur.com/d8YH7IL)
+
+\^ So that's where the story begins. I had $4082.
+
+Instead of $ROPE, I posted the [CCL DD](https://www.reddit.com/r/wallstreetbets/comments/f94hy6/the_case_for_ccl_puts/) and instead of being a retard, put it in a cheap but long-expiration 35% OTM CCL $25p July.
+
+[https://imgur.com/Nmg8DJr](https://imgur.com/Nmg8DJr)
+
+[https://imgur.com/d8YH7IL](https://imgur.com/d8YH7IL)
+
+\^ That's nice, back to $25k while everyone was still calling  🌈   🐻
+
+So, riding a few bear waves (mostly CCL since they were still cheap last week), I managed to bring myself up to $45k or so. I bought GLD the morning before the 2nd RH hiccup on my way to work (yesterday), and didn't expect the Fed to cut rates
+
+[https://imgur.com/E3EEPPh](https://imgur.com/E3EEPPh)
+
+\^That's great, I can afford a house now after the   🐶   wife took the last one
+
+Bought QQQ calls, almost lost half, but came back to BE today. Should have held it through the power hour... would have $104k right now.
+
+Currently sitting on $84k and [selling some MSFT $150p June](https://www.reddit.com/r/wallstreetbets/comments/fdnlp8/the_case_for_selling_puts_msft_150p_june/) to capture some of that IV decay. 
+
+My 1 month
+
+[https://imgur.com/gxnBzQo](https://imgur.com/gxnBzQo)
+
+My all
+
+[https://imgur.com/I4iCkDK](https://imgur.com/I4iCkDK)
+
+&#x200B;",Gain,0.96
+SPY,fdmgrr,2020-03-05 01:08:20,$SPY 50% retrace,"I spent some time looking at lots of significant initial past drops in $SPY. Daily charts typically showed a 7 bar initial drop followed by a 2-3 bar retrace of 50%. If we take the initial $SPY of $338 with a drop to $285 this gives us a 53 point drop. A 50% retrace on that is 26 points. 285+26 =  311 which is where we are currently hovering. We dropped 7 bars red and now up 3 bars green. Historical charting would indicate a steep drop from here as the issues causing the initial drop have not been resolved (Virus getting worse, more bad news)
+
+[https://www.tradingview.com/x/Ky2JuZkE/](https://www.tradingview.com/x/Ky2JuZkE/)
+
+Tomorrow and Friday will be telling...",Technicals,0.96
+YOLO,fdl2w1,2020-03-04 23:32:07,u/iiMayo - Hasn’t Been Active Since Posting YOLO Suggestion.,[deleted],Discussion,0.97
+BUY,fdl2bk,2020-03-04 23:31:11,"[DD] TRUMP KNEW ABOUT CORONAVIRUS ... BUY FUCKING PUTS, MARKET TO 0!!!!!11","May 31st, 2017 just after midnight ... President God Emperor Trump tweets :
+
+""Despite the constant negative press covfefe"" ... that's it ... the stable genius left this tweet hanging in the ether for HOURS.
+
+
+""COVFEFE"" is code.
+
+COV = COVID
+
+""FEFE"" is hexadecimal for 65278
+
+65278 is the zip code of Renick, Missouri.
+
+In the book ""The Flags of Civil War Missouri"" ... Renick is first mentioned on ... YOU GUESSED IT ... FUCKING PAGE 19.
+
+COVID-19 CONFIRMED A GOVERNMENTAL PLOT TO DESTROY THE ECONOMY STARTING NO LATER THAN 2017 BY TRUMP HIMSELF.
+
+PUTS ON FUCKING EVERYTHING ... MARKET TO 0 ... USA SOVEREIGNTY FORFEITED TO PAY OFF $30T DEBT ... AMERICANS FORCED TO EAT MSG IN A 1000 YEAR LONG WINTER WHERE THE WHITE (PRIVILEGE) WALKERS ARE ENSLAVED.
+
+FIND EVERY $0.01 PUT YOU CAN FUCKING BUY ... ALL IN
+
+HOPE YOU RETARDS CAN USE CHOP STICKS
+
+-----------------------------
+
+EDIT:  NEW FLAIR SHOULD BE ﻾
+
+EDIT2:  In case my due diligence is questioned :
+
+1.  Covfefe tweet -> https://cdn.cnn.com/cnnnext/dam/assets/170531121403-trump-covfefe-tweet-screengrab-super-tease.jpg
+
+2.  0xFEFE = 65278 ->  https://www.hexadecimaldictionary.com/hexadecimal/0xFEFE/
+
+3.  Page 19, showing Renick ->  https://books.google.com/books?id=EPSvPCX8MQQC&pg=PA19
+
+4.  Trump's new economic plan will get us to 30T in debt -> https://www.thebalance.com/trump-plans-to-reduce-national-debt-4114401
+
+5.  Quora hardline investigative reporting states that MSG is EVERYWHERE for chinese food -> https://www.quora.com/Do-Chinese-restaurants-still-use-MSG-what-is-the-purpose
+
+6.  Trump is probably God Emperor / God at best.  At worst, he was chosen by God.  -> https://www.amazon.com/God-Donald-Trump-Stephen-Strang/dp/1629994863
+
+
+FUCKING FACTS PEOPLE.  THATS HOW DD IS DONE.",Shitpost,0.96
+SPY,fdk9iv,2020-03-04 22:39:02,"Today's losses. All in on SPY puts, still holding strong with these 🌈🐻 claws",,,0.97
+CDC,fcx9rr,2020-03-03 17:40:00,Top CDC official tells Congress coronavirus almost qualifies as a global pandemic," [https://www.cnbc.com/2020/03/03/top-cdc-official-tells-congress-coronavirus-almost-qualifies-as-a-global-pandemic.html](https://www.cnbc.com/2020/03/03/top-cdc-official-tells-congress-coronavirus-almost-qualifies-as-a-global-pandemic.html) 
+
+Bear gang here we come!!!!!!!!",Discussion,0.97
+MOON,fcnw07,2020-03-03 03:45:43,"Market going back up to the MOON tomorrow, all your puts going to 0","On Thursday I called that Friday would be the bottom of the market, the SP500 would hit near 2850 and bounce back up. I was on WSB discord and EVERYONE was laughing at me when I said I was buying SPY calls. Well keep fucking laughing while your puts expire worthless tomorrow. Look at the charts and see for yourself.
+
+(EDIT: Im calling for a big bounce this week, not a bull market to ATH. You gay bears can have the fun next week. At the end of this week we may still close flat or red).
+
+Lets look at the 15 minute chart of the S&P500. Inverse head and shoulders pattern, stocks going up. Buy calls.
+
+https://preview.redd.it/onvps9fgbdk41.png?width=704&format=png&auto=webp&s=2db767e064c84977fc8f5f484dbfc38a33a316b1
+
+Now lets look at the daily chart below. The S&P 500 chart today easily broke above the 200 DMA, that is a good sign for the bulls. Next resistance ahead is the 3139 level which is the 9 DMA.
+
+https://preview.redd.it/ryz6lgxxbdk41.png?width=704&format=png&auto=webp&s=529ff7f83174621a9c3b3cfcdbd97b82c788abe3
+
+Lets look at the 60 minute chart (below). There is some resistance at the red line around the 3129 level. This is close to the 3139 level on the daily chart.
+
+https://preview.redd.it/6x4fgshccdk41.png?width=705&format=png&auto=webp&s=f7891a4beb11a11d1c36bd8fb0f21ad652a878f1
+
+Seems like tomorrow there will be a big resistance zone between the 3129-3139 level. If the S&P 500 can break above that level, then the next resistance is 3168 (100 DMA), but honestly I think itll just shoot right over it and go for 3263 level (50 DMA). Here is the reason why, look at this last chart below:
+
+https://preview.redd.it/03bf0e6scdk41.png?width=705&format=png&auto=webp&s=391838680758d0d004219ef805de917d0a6be9b4
+
+This chart shows the ratio of puts to calls in the market.
+
+More than 1 means more people buying puts. Anything above 1.1 is getting too risky and 1-sided. Anything above 1.2 is extreme
+
+Less than 1 means  more people buying calls. Anything below 0.8 is extreme.
+
+Look at this fucking chart, people are STILL holding onto their puts that were bought last week. The ratio today closed at 1.29, which is at the same level that we had on Thursday and Friday.
+
+**MOST PEOPLE HAVE NOT TAKEN PROFITS ON THEIR PUTS FROM LAST WEEK.**
+
+Tomorrow the market will open higher and LOTS of people will be selling their puts to cut their losses, which will bring the market much higher. We will go way past the 100 DMA (3168 level), we just need to break above the strong 3129-3139 level, then we go to the moon.
+
+TLDR: Everyone in this subreddit is fucking autistic and is still holding puts (thanks to Robinhood). Market opening higher tomorrow.
+
+EDIT: My call option position [https://imgur.com/1NC0lRs](https://imgur.com/1NC0lRs)
+
+EDIT 2: My previous post calling the bottom last week [https://www.reddit.com/r/wallstreetbets/comments/faloru/we\_are\_close\_to\_the\_bottom\_buy\_spy\_calls\_soon/](https://www.reddit.com/r/wallstreetbets/comments/faloru/we_are_close_to_the_bottom_buy_spy_calls_soon/)
+
+EDIT 3: So many people pissed off and downvoting this to the ground. Shows how many people are still holding their puts and about to lose tons of money. Market definitely opening higher tomorrow. Also I forgot to mention the VIX closed back inside the bollinger bands today after being outside of them for 4 straight days, big buy signal.",Technicals,0.85
+RH,fcmip7,2020-03-03 02:02:47,3/2 RH Outage +15k -&gt; -30k loss bc I couldn't do anything,,Loss,0.98
+RH,fck9iq,2020-03-02 23:27:05,A legend in the making due to RH gayness. *Not me* found on twitter complaining about RH not working to cover loss. Step up dude and take the throne as king retard.,,Loss,0.98
+A,fck9iq,2020-03-02 23:27:05,A legend in the making due to RH gayness. *Not me* found on twitter complaining about RH not working to cover loss. Step up dude and take the throne as king retard.,,Loss,0.98
+RH,fch8cm,2020-03-02 20:15:25,The perfect WSB / RH Summary for today [SOUND ON],[deleted],Shitpost,0.95
+USD,fcfmz9,2020-03-02 18:35:15,Student Loan Loss Porn : -14k USD,[deleted],Loss,0.96
+QGEN,fcfj98,2020-03-02 18:28:48,500k QGEN yolo (they make test kits for corona) shits bouttta flyyy,[deleted],YOLO,0.94
+BIG,fccqwv,2020-03-02 15:23:18,THE BIG SHORT,,YOLO,0.98
+CEO,fcc5a6,2020-03-02 14:35:11,"Jack Welch, former chairman and CEO of GE, dies at 84",,Discussion,0.94
+DIS,fcbw7p,2020-03-02 14:14:20,First Coronavirus cases in FL are 45 minutes from Disney World. Puts on DIS,"The first two confirmed cases of beer virus are in counties 45 minutes from Disney down the main central FL corridor (I-4). This is a very densely populated and transient area of Florida and Disney World is smack in the middle of it.
+
+This fact that cases have been found this close means that Disney is probably going to seriously consider shutting down the parks in near future. 
+
+The parks are supercenter of international tourists and travelers that’s probably on the short list of places to shut down first.
+
+Full article: https://www.tampabay.com/florida-politics/buzz/2020/03/02/first-patients-in-florida-test-positive-for-coronavirus/",DD,0.98
+FL,fcbw7p,2020-03-02 14:14:20,First Coronavirus cases in FL are 45 minutes from Disney World. Puts on DIS,"The first two confirmed cases of beer virus are in counties 45 minutes from Disney down the main central FL corridor (I-4). This is a very densely populated and transient area of Florida and Disney World is smack in the middle of it.
+
+This fact that cases have been found this close means that Disney is probably going to seriously consider shutting down the parks in near future. 
+
+The parks are supercenter of international tourists and travelers that’s probably on the short list of places to shut down first.
+
+Full article: https://www.tampabay.com/florida-politics/buzz/2020/03/02/first-patients-in-florida-test-positive-for-coronavirus/",DD,0.98
+YOLO,faj2i6,2020-02-27 22:14:06,SPY YOLO - “He who controls the PUTS... controls the universe.”,,YOLO,0.97
+SPY,faj2i6,2020-02-27 22:14:06,SPY YOLO - “He who controls the PUTS... controls the universe.”,,YOLO,0.97
+TSLA,faf1yn,2020-02-27 17:57:08,Called the $TSLA drop a few days ago @ $800. $700 puts printed this morning (Sold at ~$677).,,Gain,0.94
+TSLA,fae5fq,2020-02-27 16:58:12,Update - 384% gain on TSLA puts. Got my Model Y order paid off too!,[deleted],Gain,0.97
+Y,fae5fq,2020-02-27 16:58:12,Update - 384% gain on TSLA puts. Got my Model Y order paid off too!,[deleted],Gain,0.97
+A,fc8cz0,2020-03-02 08:08:58,A Beautiful Monday,"The bull is excitedly awaiting the market open. He sits in front of his monitor, behind him, two super models from last night's threesome shift in their morning drowsiness. He readies to cash in his SPY calls, dreams of Lambos in his head. Futures were green the day before, victory was assured. The gay bears could say that futures didn't matter as much as they wanted, but the bull knew that futures were aptly named futures because they predicted stonks' future.
+
+The clock strikes the fated time, pre-market is live. SPY 360 is a reality. Without wasting any time the bull unzips his pants to give room for his massive erect cock and proceeds to gloat on r/wallstreetbets. The bears had had it too good for too long, two weeks. It was time to resume with a glorious 5 year bull run. Absorbed in his ultra based shitpost against the gay bears the bull forgets to keep up with the  news, after all his victory was already guaranteed. He finally clicks the yellow POST button, anxious to tell every gay bear that he told them so, that stonks only go up, and that their dik smol. 
+
+Unbeknownst to the bull the world did not stop for him to write his post. He is immediately met with taunts and insults from the gay bears that managed to get permission from their wives' boyfriends to use the computer. Among all the jeers and ridicules was one comment that made the bulls erect cock turn into floppy lump of flesh. 
+
+""The pope is kil""
+
+ [https://www.youtube.com/watch?v=QrVl7mgVSg0](https://www.youtube.com/watch?v=QrVl7mgVSg0) plays in the background.
+
+SPY 69
+
+The gay bears cash in all their puts, excitedly calling their wives over from the master bedroom which they are allowed into once a week in case of an emergency. Beautiful chaos ensues, the popes last words ""Raining chicken tenders will herald the end of days"".",Storytime,0.91
+A,fc5vxt,2020-03-02 04:28:23,A Quick Roadmap,,Meme,0.99
+NYC,fc40na,2020-03-02 02:03:45,First case of COVID-19 in NYC,[removed],Discussion,0.91
+UK,fbukfs,2020-03-01 15:13:22,"The Secretary of State for Health and Social Care for the UK just said ""shutting down UK cities 'may become necessary'"".","[https://www.theguardian.com/world/2020/mar/01/matt-hancock-ministers-to-publish-coronavirus-battle-plan-for-uk](https://www.theguardian.com/world/2020/mar/01/matt-hancock-ministers-to-publish-coronavirus-battle-plan-for-uk)
+
+Calls on FTSE 100 stocks after this reassuring news, right?",Discussion,0.98
+UPS,fbrs7f,2020-03-01 10:35:25,UPS worker here.,[removed],Shitpost,0.87
+A,fbjmhr,2020-02-29 22:43:44,A Preview of Next Week,,Meme,0.99
+LMAO,fbi7ua,2020-02-29 21:05:53,The motherfucking pope has boomer virus and you idiots are still buying the dip LMAO,[removed],Shitpost,0.95
+PSA,fbhs0v,2020-02-29 20:36:34,Coronavirus PSA even though its common sense,"With the confirmed death of someone in my city of Seattle, I wanted to do a PSA on what you should be doing to prevent you getting robbed from your tendies:  
+
+
+1) Stay up to date with all your shots, you're literally already autistic so it literally cannot go tits up.
+
+2) Avoid close contact with people who are sick.
+
+3) Avoid touching your eyes, nose, and mouth.
+
+4) Stay home when you are sick and cover your goddamn mouth if you got to sneeze or cough. 
+
+5) Wash your hands often with soap and water for at least 20 seconds.
+
+6) Routinely clean frequently touched surfaces and objects.
+
+7) Buy puts.
+
+Edit:
+8) Don’t eat bat soup.
+
+Any additional info you need is on the CDC website: [https://www.cdc.gov/coronavirus/2019-ncov/index.html](https://www.cdc.gov/coronavirus/2019-ncov/index.html)
+
+Stay safe out there fam.
+
+Edit: at the airport and I see a bunch of you autists wearing a face mask only over your mouth but not your nose, come on",Shitpost,0.95
+SPCE,fbd98r,2020-02-29 15:29:26,"I rode SPCE up on Calls, and then down on Puts. Was able to buy myself a nice custom embroidered hoodie, tendies, a Corona, and a small treat for St. Jude's.","[Hoodie, tendies, and mexican beer (no virus yet, but I am in South Korea)](https://i.imgur.com/LAm5qgz.jpg)
+
+[St. Jude's donation in WSB name](https://imgur.com/a/q0tIxWp)
+
+[my positions ($3,170 profit currently but with puts still open)](https://imgur.com/a/xt4co1E)
+
+Title says it all, I realized I missed out on the power weaponized autism & meme stocks have on the markets. So when I first heard rumbles about SPCE I decided to jump in with calls - confident it would tank on earnings, which is why I then switched to puts near the top. My puts are still open, and they were worth a good amount more before Friday. We'll see how that plays out, I expect it to hit $10 in the next few weeks as the normies and boomers realize they've been memed.
+
+
+I'm not positive but I'm pretty sure that if I had sold my $22 strike 2/21 calls on Feb 19 instead of Feb 14 they would have been worth ~$15k instead of the $2k I got (sold when share price was at $28, then it hit $37 the next week) But I'm not smarticle enough to understand IV crush.
+
+
+I remember seeing some posts back when we were a smaller subreddit of people giving back, and I'm a huge fan of St. Jude's so I sent some love their way. I was gonna have them send the complimentary card to Richard Branson but that was too much work.",Gain,0.98
+A,fb69qv,2020-02-29 04:03:49,A quick thank you,"So I'm not exactly sure what brought me to WSB, probably some r/all post - needless to say I found it.
+
+About a four months ago my mothers went through Cancer recurrence of something we thought had been gone for years now.
+
+~~Needless to say,~~ I've been working a second job to help save up money and support her with some things back home - (I'm 34, no I don't still live with my mother).  ~~Needless to say~~ after finding this community last week, I pulled some money from my personal savings that I was using to put towards fixing up my basement a bit to try to invest and get some extra capital to help out back home. Worst case if I lost it all, it was for my basement, no big deal.
+
+I watched probably 30 hours of video around options, read nearly every discussion on here, and observed the discord for a while. I started trading around the Ally / AMD spam, was up 2k on my way to work and down 1700 by the time i got there. Lesson learned.
+
+I reached out to some of you for advice in the discord, was called a retard (thanks, I know it's a term of endearment) , and was given some really great advice and guidance. I asked probably 100 stupid questions, but was always given some really strong answers (and sarcastic abuse)
+
+End of today I sold my last group of SPY puts (right before the stupid 2.5% upswing) . I ended up around +2000 total . Far from the likes of a lot of you, but 2000 more that will immensely help back home.
+
+I just wanted to take a minute to say thank you to everyone here, even the psychopaths that sometimes blow my mind.
+
+Not sure if I'll dive back in next week - I think Im just going to take the money and run and do what I can to continue helping out - but again, thank you, retards.
+
+&#x200B;
+
+Edit: Thank you for all of your replies, private messages, well wishes, and ""awards"" . This community is great!
+
+Edit 2: Yes, I know there are taxes, thank you all for your concerns :)",Storytime,0.96
+SPY,fb5qgl,2020-02-29 03:20:46,Road to $100k CONTINUES! Sold my SPY puts this morning near 287 for some solid TENDIES! Then backed the truck up and loaded up on calls for Monday. $250 --&gt; $15k --&gt; $30k --&gt; $62k. Let's go bulls! Taking a pretty strong risk that we continue that end of day rally Monday.,[deleted],Gain,0.97
+SPY,fay28m,2020-02-28 18:17:48,"That million dollar SPY short trade from a month ago doesn't look so stupid now, does it?",,YOLO,0.97
+ARE,fam8h4,2020-02-28 01:49:55,"The stair step to heaven continues. Had a slight pull back yesterday, but this gay bear wasn't scared. To all the haters: ARE YOU NOT ENTERTAINED!?! Also, accomplished my 1st goal of achieving exemption from PDT(pattern day trader status). Bring on $100K!. $250 --&gt; $15k --&gt; $24k --&gt; $31k.",[deleted],Gain,0.97
+YOU,fam8h4,2020-02-28 01:49:55,"The stair step to heaven continues. Had a slight pull back yesterday, but this gay bear wasn't scared. To all the haters: ARE YOU NOT ENTERTAINED!?! Also, accomplished my 1st goal of achieving exemption from PDT(pattern day trader status). Bring on $100K!. $250 --&gt; $15k --&gt; $24k --&gt; $31k.",[deleted],Gain,0.97
+SPCE,facd2p,2020-02-27 14:51:21,$SPCE Rocket Crashes after Credit Suisse Downgrade,,Discussion,0.98
+GILD,fa588l,2020-02-27 03:44:38,$GILD may the lord open,,YOLO,0.98
+PFE,fa2bjm,2020-02-27 00:15:24,Long PFE Sanitizer is the COVID-19 Currency,[deleted],YOLO,0.97
+MSFT,fa0flh,2020-02-26 22:16:46,$MSFT guidance.... goodbye tendies,,Loss,0.98
+SPCE,f9sods,2020-02-26 13:45:22,"Which one of you autistic fools is trying to sell SPCE for $199,999.99",,Shitpost,0.99
+MSFT,f9r6l1,2020-02-26 11:18:13,MSFT panic sellers,"Stop selling off MSFT.
+
+COVID is biological virus, its not computer virus and cannot infect computers.
+
+MSFT is immune to biological virus and technically cannot go down. Anyone who knows how stonks works knows MSFT can only go up. 
+
+
+tldr: MSFT 200 28/2",Fundamentals,0.98
+SPY,f9m3hd,2020-02-26 03:33:08,The push to $100k from $250 continues. Managed to capitalize on more $SPY puts today as well as end of day shorts on $SPCE. Just a grand away from breaking away from the chains of the pattern day trader rule now. $250 &gt; $15k &gt; $23k.,[deleted],Gain,0.97
+NEED,f9kuxr,2020-02-26 02:04:59,ALL DEBTS NEED TO BE REPAID,"TWO AUTISTS MADE BETS LAST WEEK AND I AM HERE TO COLLECT. MY PORTFOLIO MAY BE DOWN 80%📉 FROM ATH'S BUT I HAVE ONLY BEEN KEPT GOING BY KNOWING THESE TWO RETARDS NEED TO PAY UP
+u/dantenypd
+
+I DEMAND YOU EAT SOCK🧦🧦🧦🍳🍳
+https://www.reddit.com/r/wallstreetbets/comments/f5tqcs/looks_like_ill_be_eating_my_sock_today_at_thsi/?utm_medium=android_app&utm_source=share
+
+u/jiggerson
+
+GLUG GLUG OPEN UP💦💦🍆
+https://www.reddit.com/r/wallstreetbets/comments/f5x3go/spce_is_out_of_fuel_and_is_heading_back_towards/fi1bnnb?utm_medium=android_app&utm_source=share
+
+Edit: u/dantenypd has responded to a private dm he says soon. But ban until then",Shitpost,0.99
+BE,f9kuxr,2020-02-26 02:04:59,ALL DEBTS NEED TO BE REPAID,"TWO AUTISTS MADE BETS LAST WEEK AND I AM HERE TO COLLECT. MY PORTFOLIO MAY BE DOWN 80%📉 FROM ATH'S BUT I HAVE ONLY BEEN KEPT GOING BY KNOWING THESE TWO RETARDS NEED TO PAY UP
+u/dantenypd
+
+I DEMAND YOU EAT SOCK🧦🧦🧦🍳🍳
+https://www.reddit.com/r/wallstreetbets/comments/f5tqcs/looks_like_ill_be_eating_my_sock_today_at_thsi/?utm_medium=android_app&utm_source=share
+
+u/jiggerson
+
+GLUG GLUG OPEN UP💦💦🍆
+https://www.reddit.com/r/wallstreetbets/comments/f5x3go/spce_is_out_of_fuel_and_is_heading_back_towards/fi1bnnb?utm_medium=android_app&utm_source=share
+
+Edit: u/dantenypd has responded to a private dm he says soon. But ban until then",Shitpost,0.99
+ALL,f9kuxr,2020-02-26 02:04:59,ALL DEBTS NEED TO BE REPAID,"TWO AUTISTS MADE BETS LAST WEEK AND I AM HERE TO COLLECT. MY PORTFOLIO MAY BE DOWN 80%📉 FROM ATH'S BUT I HAVE ONLY BEEN KEPT GOING BY KNOWING THESE TWO RETARDS NEED TO PAY UP
+u/dantenypd
+
+I DEMAND YOU EAT SOCK🧦🧦🧦🍳🍳
+https://www.reddit.com/r/wallstreetbets/comments/f5tqcs/looks_like_ill_be_eating_my_sock_today_at_thsi/?utm_medium=android_app&utm_source=share
+
+u/jiggerson
+
+GLUG GLUG OPEN UP💦💦🍆
+https://www.reddit.com/r/wallstreetbets/comments/f5x3go/spce_is_out_of_fuel_and_is_heading_back_towards/fi1bnnb?utm_medium=android_app&utm_source=share
+
+Edit: u/dantenypd has responded to a private dm he says soon. But ban until then",Shitpost,0.99
+CEO,f9hadz,2020-02-25 22:11:18,Bob Iger to step down as Disney CEO,,Discussion,0.99
+A,f9ap2m,2020-02-25 15:02:38,A Prayer for the MSFT Autists Today,"Our Billy
+
+Who art in Seattle
+
+Hallowed be thy name
+
+Thy kingdom come
+
+And thy JEDI is done
+
+On earth, but mainly in the US.
+
+Give us this contract
+
+Our Donny T
+
+And forgive our sad contracts
+
+As we forgive those
+
+Who trusted in Bezos
+
+And lead us not into new contracts
+
+But deliver us from selling
+
+Amen",Shitpost,0.96
+MSFT,f9ap2m,2020-02-25 15:02:38,A Prayer for the MSFT Autists Today,"Our Billy
+
+Who art in Seattle
+
+Hallowed be thy name
+
+Thy kingdom come
+
+And thy JEDI is done
+
+On earth, but mainly in the US.
+
+Give us this contract
+
+Our Donny T
+
+And forgive our sad contracts
+
+As we forgive those
+
+Who trusted in Bezos
+
+And lead us not into new contracts
+
+But deliver us from selling
+
+Amen",Shitpost,0.96
+SPY,f8ztqg,2020-02-24 23:50:36,"From $250 to $16k in a few weeks. Made most of my money on SPY puts today. Finally turned my all time high green! I was a big gay bear today, sorry guys.",[deleted],Gain,0.97
+SPY,f8sf0f,2020-02-24 16:00:59,For Your Eyes only - Sold all - Sweet SPY PUTS - $185250 profits,[deleted],Gain,0.97
+RING,f8scz7,2020-02-24 15:56:42,RING IT JERRY,,Meme,0.98
+IT,f8scz7,2020-02-24 15:56:42,RING IT JERRY,,Meme,0.98
+TQQQ,f8s1tc,2020-02-24 15:33:53,TQQQ is going BUST,"Alright autists, listen up. The retards who run $TQQQ are autists just like you, they over-leveraged themselves and are now going bust. Instead of holding cash closer to 15-20-25% of their nominal exposure, as they normally do, in the past years they started holding less and less, now around 9-10% of nominal exposure in cash, and another 23-33% in STONKS (because holding stonks instead of cash = more gainz, greedy asswipes). You can find their holdings on Friday after close [here](https://www.proshares.com/funds/tqqq_daily_holdings.html) if you want to confirm. 
+
+That works until it doesn't, and today they are blowing themselves the fuck up. After Friday's close rebalancing, TQQQ held $12,520,585,402 worth of nominal exposure in NASDAQ 100 Index SWAPS (i.e. if NDX is up 1% on Monday, they get paid 1% of the $12.5b in cash at the end of the day, and if it's down 1% on Monday, they lose 1% of the $12.5b and have to pay up at the end of they day).
+
+Their collateral is as follows: $1,327,634,666 CASH (around 10.6% of exposure) and $4,266,859,496 in STONKS at Friday closing prices (34% of exposure).
+
+
+IF NDX closes down 5% today, they have to pony up around $625m cash. This will cut the total assets from $5.6b to $5b. But 77% of their collateral assets are in stocks, which are also down. So their actual asset value will be AT MOST ~$4.3b. That's actually a LOSS of ~25% for today, not 15%. But wait, there's more. TQQQ will need at least an extra $1b in CASH on top of their loss for today, to use as swap collateral in the rebalancing for tomorrow. That means TQQQ will have to DUMP STONKS OUT THE MF WAZOO, which will bring QQQ down even further, which will mean that TQQQ will close down even more than 15% etc => feedback loop => even worse loss => real trouble
+
+IF NDX closes down more than 6-7%, it's a straight up BUST. 
+
+Not only are they greedy fucks, they actually increased their share holdings to cash ratio since the 19th... That's right, TQQQ bought the dip and now are gettting EXTRA bearclapping. 
+
+
+Plays are SELL ANY TQQQ shares you're long bros don't be retarded and risk holding the bag all the way to 0, short TQQQ and/or back up the truck and buy asstons of OTM puts.
+
+TLDR: TQQQ got greedy, over-leveraged themselves, and now getting their ass MARGIN CALLED by the gay bear gang and have a good chance of going BUST.
+
+Disclaimer: yadda yadda this is not financial advice do your own DD and fuck you too.",DD,0.97
+RISE,f8ii1b,2020-02-24 01:11:07,BULLS RISE UP,"NEXT WEEK WE WILL BE SHOVING OUR TENDIES SO FAR UP 🌈🐻 ASSES THEY WILL BEGIN TO ABSORB THE NUTRIENTS
+
+HOLD UR CALLS AND POLISH UR BRASS BALLS CUZ MAMA AINT RAISE NO BICH",Shitpost,0.94
+UP,f8ii1b,2020-02-24 01:11:07,BULLS RISE UP,"NEXT WEEK WE WILL BE SHOVING OUR TENDIES SO FAR UP 🌈🐻 ASSES THEY WILL BEGIN TO ABSORB THE NUTRIENTS
+
+HOLD UR CALLS AND POLISH UR BRASS BALLS CUZ MAMA AINT RAISE NO BICH",Shitpost,0.94
+TSLA,f848m3,2020-02-23 04:58:25,Lost 93k selling naked TSLA and SPCE calls - lessons learned and moving forward,"Inspired by /u/stormwillpass's post on writing naked TSLA calls, I wanted to share with the community a similar story, how not to have your money vanish before your eyes and what I've learned during this process.
+
+Background: I trade with Fidelity and have Level 5 option power.
+
+During the early days of February, I started writing naked $TSLA short term (3-4 days out) calls at about .15 Delta thinking that there was no way the stock would hit the strike and I would profit.
+
+However, $TSLA spiked on multiple days, and the IV on my calls exploded (wrote them at 180% IV and BTC at 350+ IV) that caused my cash requirement to increase significantly and resulted in a margin call and subsequent forced liquidation (Buy to Close) at significant losses.
+
+The shitty thing about this is that $TSLA closed the week below the strike price of my calls, and I would have gotten out with a profit if my broker didn't liquidate me.
+
+This same exact thing happened with $SPCE with me writing $35C and $40C calls early this week, and was margin called and liquidated and the stock closed the week at $33.87.
+
+Lessons learned:
+
+* Writing naked calls on anything is a terrible fucking idea and if either the price of your security moves against you and/or IV explodes, you are at risk of being margin called. If that happens,  you literally have no choice but to liquidate and would not be able to bank on the security moving in your favor in the time remaining on your contracts.
+* Fidelity is much more conservative with margin than almost any other broker I've used, (Charles Schwab, RH) and would margin call you even if you still have a significant amount of capital on your account. The day I was margin called, I still had 60k account value left. I also was not given any time to meet my margin call so it was wire in cash immediately or we will liquidate you.
+
+Let me know if you have any questions about this. Hopefully, the goal is this post is to teach theta gang that you should always hedge your positions that have unlimited losses so you don't end up like me.
+
+TL:DR - you can be absolutely correct and still lose money.
+
+Edit: Thanks for the gold kind stranger.
+
+[https://imgur.com/a/omx9fYS](https://imgur.com/a/omx9fYS)",Loss,0.97
+SPCE,f848m3,2020-02-23 04:58:25,Lost 93k selling naked TSLA and SPCE calls - lessons learned and moving forward,"Inspired by /u/stormwillpass's post on writing naked TSLA calls, I wanted to share with the community a similar story, how not to have your money vanish before your eyes and what I've learned during this process.
+
+Background: I trade with Fidelity and have Level 5 option power.
+
+During the early days of February, I started writing naked $TSLA short term (3-4 days out) calls at about .15 Delta thinking that there was no way the stock would hit the strike and I would profit.
+
+However, $TSLA spiked on multiple days, and the IV on my calls exploded (wrote them at 180% IV and BTC at 350+ IV) that caused my cash requirement to increase significantly and resulted in a margin call and subsequent forced liquidation (Buy to Close) at significant losses.
+
+The shitty thing about this is that $TSLA closed the week below the strike price of my calls, and I would have gotten out with a profit if my broker didn't liquidate me.
+
+This same exact thing happened with $SPCE with me writing $35C and $40C calls early this week, and was margin called and liquidated and the stock closed the week at $33.87.
+
+Lessons learned:
+
+* Writing naked calls on anything is a terrible fucking idea and if either the price of your security moves against you and/or IV explodes, you are at risk of being margin called. If that happens,  you literally have no choice but to liquidate and would not be able to bank on the security moving in your favor in the time remaining on your contracts.
+* Fidelity is much more conservative with margin than almost any other broker I've used, (Charles Schwab, RH) and would margin call you even if you still have a significant amount of capital on your account. The day I was margin called, I still had 60k account value left. I also was not given any time to meet my margin call so it was wire in cash immediately or we will liquidate you.
+
+Let me know if you have any questions about this. Hopefully, the goal is this post is to teach theta gang that you should always hedge your positions that have unlimited losses so you don't end up like me.
+
+TL:DR - you can be absolutely correct and still lose money.
+
+Edit: Thanks for the gold kind stranger.
+
+[https://imgur.com/a/omx9fYS](https://imgur.com/a/omx9fYS)",Loss,0.97
+DD,f7l3ah,2020-02-22 02:06:09,Some DD on the surge in WSB popularity,"People gonna chase easy gains, doesn't matter what the thing is. [Here's some really interesting data that explains the recent surge in wsb users.](https://imgur.com/a/jZHwRWe)",Shitpost,0.98
+YOU,f7kko1,2020-02-22 01:26:49,WIN OR LOSE; YOU NEED TO BE GRATEFUL,"There should be nobody whining and crying on this glorious sub. Get a hold of yourself. 
+
+Just having the CHANCE to generate a SHITLOAD of money in the stock market is such a god damn privilege and honor. 
+
+We are the luckiest motherfuckers on the planet!!! So glad I was born in the U.S.A.!!!
+
+There are some MAJOR companies reporting their earnings next week from 2/24-2/28. IT WILL BE A GREAT TIME TO MAKE MONEY. CHOOSE WISELY.",Discussion,0.93
+NEED,f7kko1,2020-02-22 01:26:49,WIN OR LOSE; YOU NEED TO BE GRATEFUL,"There should be nobody whining and crying on this glorious sub. Get a hold of yourself. 
+
+Just having the CHANCE to generate a SHITLOAD of money in the stock market is such a god damn privilege and honor. 
+
+We are the luckiest motherfuckers on the planet!!! So glad I was born in the U.S.A.!!!
+
+There are some MAJOR companies reporting their earnings next week from 2/24-2/28. IT WILL BE A GREAT TIME TO MAKE MONEY. CHOOSE WISELY.",Discussion,0.93
+BE,f7kko1,2020-02-22 01:26:49,WIN OR LOSE; YOU NEED TO BE GRATEFUL,"There should be nobody whining and crying on this glorious sub. Get a hold of yourself. 
+
+Just having the CHANCE to generate a SHITLOAD of money in the stock market is such a god damn privilege and honor. 
+
+We are the luckiest motherfuckers on the planet!!! So glad I was born in the U.S.A.!!!
+
+There are some MAJOR companies reporting their earnings next week from 2/24-2/28. IT WILL BE A GREAT TIME TO MAKE MONEY. CHOOSE WISELY.",Discussion,0.93
+OR,f7kko1,2020-02-22 01:26:49,WIN OR LOSE; YOU NEED TO BE GRATEFUL,"There should be nobody whining and crying on this glorious sub. Get a hold of yourself. 
+
+Just having the CHANCE to generate a SHITLOAD of money in the stock market is such a god damn privilege and honor. 
+
+We are the luckiest motherfuckers on the planet!!! So glad I was born in the U.S.A.!!!
+
+There are some MAJOR companies reporting their earnings next week from 2/24-2/28. IT WILL BE A GREAT TIME TO MAKE MONEY. CHOOSE WISELY.",Discussion,0.93
+SPCE,f7g0n5,2020-02-21 20:15:02,"Yap, I bought 3600 SPCE at 41.7 each","I gave up and sold at 34.77, my loss is somewhere at 25k mark. I learned a valuable lesson of not fucking with shit like that. This is a valuable lesson for me, due to the fact that I’m still 19 and still a little retarded. I should be able able to earn my money back by hard work in 1-1.5 year (finished college by 18, did some shopify before it fucked up because of over-saturation, worked hard by my diploma as an 
+immigrant and saved up on everything). Unfortunately I will not be able to flex with a new Tesla and my future investments will certainly be more technical and less impulsive. I lost this money in stupid way, but I could have lost it by spending on some random shit instead of saving. 
+
+Gay bear gang here
+
+Don’t have a screenshot for sale, but here is screenshot for proof of position:
+https://m.imgur.com/a/fcMSA5u",Loss,0.82
+BUY,f7djtc,2020-02-21 17:28:07,Remember: BUY THE DIP,"Buying the dip is a consistent strategy that always works. 
+
+The market always goes back up and you print free money
+
+If it crashes, everyone is dead from the coronavirus anyway and then it doesn’t matter
+
+Literally can’t go tits up",Shitpost,0.98
+MIK,f7c9rx,2020-02-21 16:00:50,Regarding the ban of u/closethefuckinglight and ban on $MIK,[deleted],Mods,0.95
+SPCE,f731dt,2020-02-21 01:51:42,SPCE Endings en Route,,Fundamentals,0.93
+GLUU,f72xbq,2020-02-21 01:43:35,$GLUU is the perfect tendie dipping sauce,[deleted],Discussion,0.93
+DD,f72gu2,2020-02-21 01:10:04,To the guy who gave the DD on $LL,[removed],Discussion,0.98
+LL,f72gu2,2020-02-21 01:10:04,To the guy who gave the DD on $LL,[removed],Discussion,0.98
+BUY,f708e8,2020-02-20 22:37:45,"BUY AMD, the analyst downgrade was a weak move",,Technicals,0.99
+SPCE,f6vawa,2020-02-20 17:13:12,Proof that $SPCE is past its prime,,Meme,0.97
+ON,f6uy95,2020-02-20 16:48:58,/u/Jiggerson HAS TO DRINK THEIR OWN CUM ON VID,"HE GAVE HIS WORD
+
+
+https://www.reddit.com/r/wallstreetbets/comments/f5x3go/spce_is_out_of_fuel_and_is_heading_back_towards/fi1bnnb?utm_source=share&utm_medium=web2x
+
+STRAP ON YOUR SEATBELTS EVERYONE
+
+GET SOME POPCORN
+
+AND MSFT 2/21 200C 
+
+GOOOOOOO",Shitpost,0.96
+HAS,f6uy95,2020-02-20 16:48:58,/u/Jiggerson HAS TO DRINK THEIR OWN CUM ON VID,"HE GAVE HIS WORD
+
+
+https://www.reddit.com/r/wallstreetbets/comments/f5x3go/spce_is_out_of_fuel_and_is_heading_back_towards/fi1bnnb?utm_source=share&utm_medium=web2x
+
+STRAP ON YOUR SEATBELTS EVERYONE
+
+GET SOME POPCORN
+
+AND MSFT 2/21 200C 
+
+GOOOOOOO",Shitpost,0.96
+EAT,f6uhdn,2020-02-20 16:16:33,SPCE hit $40+ EAT THE SOCKS!,"Hi autists,
+
+There was a gentlemen who promised to eat his deep fried socks if SPCE saw a high of $40 this week. The post got good attention, however I am unable to find it, it happened less than 7 days ago iirc. Could I borrow some of your retard powers to call this human out?
+
+Sincerely,
+Your wife’s boyfriend.",Discussion,0.97
+SPCE,f6uhdn,2020-02-20 16:16:33,SPCE hit $40+ EAT THE SOCKS!,"Hi autists,
+
+There was a gentlemen who promised to eat his deep fried socks if SPCE saw a high of $40 this week. The post got good attention, however I am unable to find it, it happened less than 7 days ago iirc. Could I borrow some of your retard powers to call this human out?
+
+Sincerely,
+Your wife’s boyfriend.",Discussion,0.97
+A,f6tthu,2020-02-20 15:27:56,"Lumber Liquidators (LL) - A massive turnaround play - The short dated calls will likely double after earnings. I have 25,000 shares + calls and will buy more. Position screenshots included.",[removed],YOLO,0.95
+LB,f6mq5x,2020-02-20 04:22:18,"You like options? Here's some that might give some tendies: VSLR, CARG, ACM, LB (plus full info)",[deleted],Options,0.96
+TSLA,f6lx06,2020-02-20 03:21:33,Been riding with Elon and $TSLA since the cybertruck unveil not done yet!!!,,Gain,0.98
+STMP,f6kl9h,2020-02-20 01:43:57,Stamp. It. Out with $STMP,,Satire,0.96
+YOU,f6j9wd,2020-02-20 00:10:58,YOU DONT WANT TO MISS THIS,,Shitpost,0.97
+WANT,f6j9wd,2020-02-20 00:10:58,YOU DONT WANT TO MISS THIS,,Shitpost,0.97
+CAKE,f6chlj,2020-02-19 16:45:35,Get on board... $CAKE has a perfect bull flag and is about to FLY,"Listen up. Look at 1month $CAKE. Literally the ideal setup for a bull flag. That shit is going to lift off this week.
+
+&#x200B;
+
+https://preview.redd.it/76sp75ldiwh41.png?width=487&format=png&auto=webp&s=8a375b53e474571952d1a4c0e91fcd0096e33f60
+
+It's literally testing the 40 dollar resistance RIGHT NOW.  Its easily going to break $45 EOW with no upper limit until the $50 dollar range. Its literally free money.
+
+&#x200B;
+
+\*EDIT: ITS BEGINNING
+
+*** HOPE YOU GUYS SOLD FOR PROFt
+
+Ok story time: today my friend sent me a shitty meme about autistic people and cheese and I replied that this market is so autistic I bet I can make money by finding a ticker most similar to cheese which is how I found cheesecake. The setup seemed so perfect I had to share it. At around noon it was going up way too fast and my weak hands dropped and sold my calls for +40%. I left to do some work and came back to find the post blew up a little and a bunch of autists thought I was on to something who bought at the top. RIP glorious bastards.
+
+EDIT 4 THE DREAM PERSISTS",Technicals,0.9
+FLY,f6chlj,2020-02-19 16:45:35,Get on board... $CAKE has a perfect bull flag and is about to FLY,"Listen up. Look at 1month $CAKE. Literally the ideal setup for a bull flag. That shit is going to lift off this week.
+
+&#x200B;
+
+https://preview.redd.it/76sp75ldiwh41.png?width=487&format=png&auto=webp&s=8a375b53e474571952d1a4c0e91fcd0096e33f60
+
+It's literally testing the 40 dollar resistance RIGHT NOW.  Its easily going to break $45 EOW with no upper limit until the $50 dollar range. Its literally free money.
+
+&#x200B;
+
+\*EDIT: ITS BEGINNING
+
+*** HOPE YOU GUYS SOLD FOR PROFt
+
+Ok story time: today my friend sent me a shitty meme about autistic people and cheese and I replied that this market is so autistic I bet I can make money by finding a ticker most similar to cheese which is how I found cheesecake. The setup seemed so perfect I had to share it. At around noon it was going up way too fast and my weak hands dropped and sold my calls for +40%. I left to do some work and came back to find the post blew up a little and a bunch of autists thought I was on to something who bought at the top. RIP glorious bastards.
+
+EDIT 4 THE DREAM PERSISTS",Technicals,0.9
+YOLO,f6612r,2020-02-19 06:30:13,$100k YOLO on $TSLA. How high or low is Tesla going?!,[deleted],YOLO,0.98
+AMD,f5ziqc,2020-02-18 22:53:02,AMD is the new SPCE,"Consider this the start of AMD's new designation as the all-pile-on bull crazy parabolic stock to go in on. AMD Deep OTM FDs for all! This shit will hit $70 within two weeks when the slow tortoises catch up to the early napping hares. Then when the hair is passed, instead of being a heavy sleeper, smell that lazy boomer tortoise and jump off the tendie train because that mofo is about to crash back down to earth and rest at $60. 
+
+tl;dr Thank you SPCE, now AMD shall rise",Shitpost,0.94
+SPCE,f5ziqc,2020-02-18 22:53:02,AMD is the new SPCE,"Consider this the start of AMD's new designation as the all-pile-on bull crazy parabolic stock to go in on. AMD Deep OTM FDs for all! This shit will hit $70 within two weeks when the slow tortoises catch up to the early napping hares. Then when the hair is passed, instead of being a heavy sleeper, smell that lazy boomer tortoise and jump off the tendie train because that mofo is about to crash back down to earth and rest at $60. 
+
+tl;dr Thank you SPCE, now AMD shall rise",Shitpost,0.94
+PLUG,f5ys4i,2020-02-18 22:06:39,Big move options trade on $PLUG,[removed],Gain,0.88
+SPCE,f5wo6c,2020-02-18 19:54:26,WHAT IN THE FUCK SPCE,"I put my heart and soul into this meme stock. I Believed in it when I knew it had no real value. My Jan 1 Call was up nearly a thousand dollars, things were great, and then THIS GOD DAMN MEME STOCK DROPS 30% IN TWO HOURS.
+
+How is that even possible? What in the fuck kind of volatility is this. I expected Papa Branson to personally deliver me a plate of crisp golden tendies and instead all I have is extreme regrets from not selling.
+
+Also, fuck  🌈  🐻",Shitpost,0.91
+BE,f5tqcs,2020-02-18 16:48:18,LOOKS LIKE ILL BE EATING MY SOCK TODAY AT THSI RATE,"As per my earlier post, if $SPCE hits $40 by the end of the week I’ll eat my sock deep fried, kind of fucking scared but at the same time LETS FUCKING GO",Shitpost,0.98
+AT,f5tqcs,2020-02-18 16:48:18,LOOKS LIKE ILL BE EATING MY SOCK TODAY AT THSI RATE,"As per my earlier post, if $SPCE hits $40 by the end of the week I’ll eat my sock deep fried, kind of fucking scared but at the same time LETS FUCKING GO",Shitpost,0.98
+MSFT,f5stfy,2020-02-18 15:45:06,Why Should You Buy MSFT Calls?,[deleted],Fundamentals,0.95
+SPCE,f5sqgz,2020-02-18 15:39:11,Thanks SPCE 🚀 Good Luck everyone!,,Gain,0.97
+SPCE,f5ji4m,2020-02-18 02:21:56,$SPCE CALL HOLDERS,,Shitpost,0.89
+SPCE,f5ivvf,2020-02-18 01:37:28,Duel of $SPCE Fates,,Shitpost,0.98
+AMD,f5egjw,2020-02-17 20:51:36,[DD] AMD is going UP this week.,"Why are any of you autists not buying into AMD/talking about it? 
+
+**Notable bullet points** 
+
+*  Apples putting AMD chips in the new MacBooks. (short intel soon)
+-- https://www.digitaltrends.com/computing/why-apple-should-ditch-intel-for-amd/
+* AMD's chip technology is the current best in the market.
+--https://www.digitaltrends.com/computing/amd-vs-intel/
+* New chips in BOTH the PS5/XBOX X
+* Continuous Growth 
+* Intels a boomer company
+* Nvidia HOLDS the market. They love AMD. The CEO of amd is literally the niece of Nividas CEO. Forced Partnership.
+* Analysts Price Target of $66 - Raised Constantly.
+
+**DO YOU AUTISTS NOT LIKE FREE MONEY?**
+ 
+""I can't read, please just tell me what to buy!""
+- 
+It's simple. Squeeze Short, High Cheap Long.
+
+- **02/28 - Calls $62 -** Under. Realistically we can expect the margin to close. There will be some hesitation, trust me, I'm on a lot of coke right now. 
+-/
+* **03/27 - Calls $60-66** . After hesitation the news will start spreading. People will push to at least close margin. 
+* Yearlies if you didn't already make thousands off of the initial calls. No pussy shit.
+
+
+**I'll ask again. Do you not want free money?**
+----
+Literally can't go tits up. Trust me, I'm autistic.",DD,0.96
+UP,f5egjw,2020-02-17 20:51:36,[DD] AMD is going UP this week.,"Why are any of you autists not buying into AMD/talking about it? 
+
+**Notable bullet points** 
+
+*  Apples putting AMD chips in the new MacBooks. (short intel soon)
+-- https://www.digitaltrends.com/computing/why-apple-should-ditch-intel-for-amd/
+* AMD's chip technology is the current best in the market.
+--https://www.digitaltrends.com/computing/amd-vs-intel/
+* New chips in BOTH the PS5/XBOX X
+* Continuous Growth 
+* Intels a boomer company
+* Nvidia HOLDS the market. They love AMD. The CEO of amd is literally the niece of Nividas CEO. Forced Partnership.
+* Analysts Price Target of $66 - Raised Constantly.
+
+**DO YOU AUTISTS NOT LIKE FREE MONEY?**
+ 
+""I can't read, please just tell me what to buy!""
+- 
+It's simple. Squeeze Short, High Cheap Long.
+
+- **02/28 - Calls $62 -** Under. Realistically we can expect the margin to close. There will be some hesitation, trust me, I'm on a lot of coke right now. 
+-/
+* **03/27 - Calls $60-66** . After hesitation the news will start spreading. People will push to at least close margin. 
+* Yearlies if you didn't already make thousands off of the initial calls. No pussy shit.
+
+
+**I'll ask again. Do you not want free money?**
+----
+Literally can't go tits up. Trust me, I'm autistic.",DD,0.96
+SPCE,f52c1q,2020-02-17 04:22:09,Gainz porn...pretty much all SPCE from the get go.,,Gain,0.97
+DD,f508e9,2020-02-17 01:41:34,DD is in! There’s only one direction to $SPCE,,Meme,0.97
+SPCE,f508e9,2020-02-17 01:41:34,DD is in! There’s only one direction to $SPCE,,Meme,0.97
+SPCE,f4wqas,2020-02-16 21:33:31,"To the moon I go, chasing SPCE tendies",,Gain,0.96
+MOON,f4ruia,2020-02-16 16:10:04,Are you ready for the MOON,,,0.98
+NOW,f4j3cc,2020-02-16 02:11:05,The next great meme stock - DXCM. Get your sugar rush NOW,[deleted],DD,0.89
+SPCE,f4ggus,2020-02-15 22:57:09,PSA for those missed out on SPCE,"It's a meme stock, it's random and it's unpredictable. Don't feel bad, don't FOMO and most definitely don't YOLO all in next Tuesday. Play safe and double down on MSFT.",DD,0.91
+PSA,f4ggus,2020-02-15 22:57:09,PSA for those missed out on SPCE,"It's a meme stock, it's random and it's unpredictable. Don't feel bad, don't FOMO and most definitely don't YOLO all in next Tuesday. Play safe and double down on MSFT.",DD,0.91
+SPCE,f4c2ey,2020-02-15 17:55:21,A Message to SPCE Call Holders,,Shitpost,0.98
+A,f4c2ey,2020-02-15 17:55:21,A Message to SPCE Call Holders,,Shitpost,0.98
+SPCE,f40e9n,2020-02-14 23:57:33,SPCE gave me some sweet sweet tendies today,"Not bad for a n00b autist.
+
+I probably should have held onto it longer, but I just couldn't let it sit around over the weekend - old man Branson could get hit by a bus or something on his way to hop on that galactic aeroflapper of his.
+
+&#x200B;
+
+[YOLO'd my $1.5K](https://preview.redd.it/19v0el9ryyg41.png?width=700&format=png&auto=webp&s=6fe5e72e6a42859285bdb718453b053325953ce1)
+
+&#x200B;
+
+[Sweet, Sweet Tendies for Days](https://preview.redd.it/873wi2nvyyg41.png?width=705&format=png&auto=webp&s=690efb2485714a0c19068a88e6bb4db9eb92491d)",Gain,0.97
+SPCE,f3vpqo,2020-02-14 18:43:26,SPCE is going down below $22 - get your Tendies now... I have a gut feeling,"Its either that shitty Chinese food I ate yesterday or a real gut feeling. I think this company in the LONG RUN... will be incredible but its getting too much hype off Instagram posts and moving a space ship. They haven't done ANYTHING YET and yet their Market cap is 5.3 BILLION!!??!?
+
+I have never been a Bear and I know STONKS only GO UP.... and this will only go up in the future, but this parabolic rise in the past 10 days... isn't sustainable. Cheap   3/6 $21 Puts 1.4
+
+I bet you u/WSBGGOD would agree!!  Let the downvotes start coming just because SPCE is going to the Moon.
+
+&#x200B;
+
+EDIT: I fat-fingered my typing its actually $21 not $20",Shitpost,0.85
+SPCE,f3vkud,2020-02-14 18:34:16,Time to learn what SPCE actually does...,,Options,0.98
+MSFT,f3taxf,2020-02-14 15:57:41,You fuckers fucked me over with $MSFT,I’ve been sitting on September 210c MSFT calls since early January and all of a sudden the stock starts dipping as soon as this place starts buying. Luckily the attention spans here are shorter than Bezos’ cock so we’ll start rolling again in the near future. But I’m happy that all of you who bought weekly calls got fucked.,Discussion,0.81
+SPCE,f3t4si,2020-02-14 15:44:34,SPCE to 26 today.,"Today is the day it hits 25, a major milestone to 100 then it will continue to 26. Its not too late, from 24-100 there are lots of tendies along the way. 
+
+Buy SPCE, don’t be a 🏳️‍🌈🐻
+
+Edit: Snooze you lose....
+
+Edit 2: I called that shit, gay bears may leave now
+
+Edit 3: Don’t freak out about price rn, it looks like a dip but there are only like 2k shares being sold as quick profit until 26.3
+
+Edit 4: If you sell rn I’m gonna find you and kill you, stop wasting profits
+
+Edit 5: Use the dip to buy when it hits its lowest. Good chance to get in on this shit. I’m up 300% in the last 2 weeks lol
+
+Hold boys, 27 is an easy one per sales volume.
+
+
+Edit 6: THE AMOUNT OF SHARES BLOCKING 30$ IS VERY LITTLE. 
+
+Edit 7: that just changes very quickly now a decent barrier in 28. Fukkkk
+
+Edit 8: Imo it’s gonna spike right now at 12:40 and then crash until 2 then recover back to where we are now setting us up for Tuesday 20% gains.
+
+Edit 9: I think I was right 📉 for a little bit I think boys. Don’t be 🏳️‍🌈🐻 tho and buy puts lol
+
+Final Edit: Good day ladies and gents and retards. Was a great day for SPCE. Happy tendies and remember not to be a pussy. Now go jerk off to SPCE charts bc you don’t have a girl to fuck tonight. ❤️
+
+u/Crude_Future can suck my tendies",Discussion,0.95
+AMZN,f3pu0t,2020-02-14 10:28:20,Let’s fuck over $AMZN,[removed],Shitpost,0.91
+SPCE,f3iub6,2020-02-14 00:16:53,Got fired. I'm glad that I was able to do something for this community. I have a 10k portfolio in SPCE and it will save me!,[deleted],Storytime,0.93
+MSFT,f3fzoh,2020-02-13 21:09:00,Here's the truth about $MSFT,"If you have anything less than a March call, you're probably fucked. I wish it weren't true but Bezos can't just be happy with his $165 million mansion and is upset at the term ""Microsoft"" because it reminds him of his penis.
+
+That being said, this will start to rebound in a week and then go back to normal uptrend in two weeks. 
+
+So, yes, buy this dip but don't get emotional. If you're down, you're down. It sucks but that's the way the game goes. Just time this dip and make your money back. Put the losses in the back of your head and treat it as a completely new opportunity.
+
+For those that have April or father out calls, you're fine and you'll get your tendies in due time.",Discussion,0.97
+MSFT,f3flkd,2020-02-13 20:44:03,$MSFT and the Great Reckoning (DD inside),"Sad about lost tendies and seeing red? Your 3/20 $200 calls are losing you money? Here’s some great advice for you my fellow autists. Double the fuck down baby. Ask yourself, when has Microsoft ever not risen to a new high after a dip? Never. What has Papa Trump been doing his entire presidency? Packing the courts with his judges and throwing legal precedents out the window. If you consider the extrapolated mathematics and we use the formula of X + Y = T, where X is Microsoft and Y is the courts and T is of course, tendies, you will find that after doing the math, this only means one thing. Trump will ensure Microsoft gets the contract, Microsoft will boom even bigger than before, and tendies will rain from the sky in glorious rapture. The false Amazon prophets will try and lead us astray in these three days the contract is delayed, and all we have to do is double down on our positions and buy even more calls on the dip. Literally fool proof, cannot go tits up. Thank you for coming to my TED talk",Shitpost,0.95
+IT,f3e3yr,2020-02-13 19:13:55,BLAZE IT HUNG HUANG,,YOLO,0.97
+LOVE,f3c60l,2020-02-13 17:08:15,GUYS I LOVE MICROSOFT,"I knew Bull Gates was gonna pull through for us. I think he purposely threw this curveball so he could separate the autists from everyone else.
+
+EDIT: I’m sorry guys, I think I jinxed it
+
+EDIT 2: OOOOOOOOOF",Shitpost,0.95
+E,f30vez,2020-02-13 01:07:41,$MSFT Holders/Autists: Tomorrow's a big day. Judge Patricia E Campbell-Smith is expected to rule on whether to issue the stop-work order by Thursday.,"""Under a schedule already agreed to the court, Amazon, DoD and Microsoft, judge Patricia E Campbell-Smith is expected to rule on whether to issue the stop-work order by Thursday. If she does not, the Defense Department has said **it plans to issue the first “substantive” JEDI task order to Microsoft on Friday.""**
+
+[Source](https://federalnewsnetwork.com/defense-main/2020/02/aws-seeks-trump-testimony-in-jedi-cloud-lawsuit/)
+
+If all goes accordingly, headlines will read AWS defeated by Azure. Refocusing attention on Microsoft's profitable and growing cloud business. Not to mention, this is a 10 year deal with openings to new government cloud deals.
+
+***Why is this a big deal?***
+
+From my personal experience in the cloud business, I've worked directly with one of Amazon's subsidiaries on large cloud deals (over 7-figures) in Asia & South America for streaming services that needed low-latency that AWS could not provide due to their datacenter locations. It took our company over 7 months through litigation, red-lines, etc to finalize a contract. One the contract was finished and approved, getting new business can be done in the same day, i.e., once Microsoft is awarded, they can continue growing their government deals as needed, in the same day.
+
+Thus, tomorrow's ruling is a big win (if it happens) for Microsoft.
+
+Update: [the author just posted a new article](https://federalnewsnetwork.com/defense-main/2020/02/as-key-jedi-court-decision-looms-pentagon-warns-of-national-security-concerns/)
+
+A few key takeaways:
+
+1. ""...the government argued not only that Amazon lacks the necessarily legal basis to get the temporary stop-work order, issuing one would cause **concrete harm to national security**.""
+
+*Favors MSFT*
+
+2) ""...To win the injunction, among other factors, Amazon needs to show that it’s likely to win the underlying lawsuit and that it its interests would suffer more without a work stoppage than the government’s would if the JEDI buildout was paused.""
+
+*Favors MSFT*
+
+3) “While still lacking several key features of the JEDI Cloud…\[DoD\] anticipates a  financial  harm of between $5 and $7 million dollars every month that performance of the JEDI contract is delayed.”
+
+*Nail in the coffin. Case dismissed. MSFT, flawless victory.*
+
+Edit 2: [Reporter responded to me with timeframe for court ruling tomorrow.](https://twitter.com/jserbuWFED/status/1227793712702509057?s=20)",DD,0.98
+MSFT,f30vez,2020-02-13 01:07:41,$MSFT Holders/Autists: Tomorrow's a big day. Judge Patricia E Campbell-Smith is expected to rule on whether to issue the stop-work order by Thursday.,"""Under a schedule already agreed to the court, Amazon, DoD and Microsoft, judge Patricia E Campbell-Smith is expected to rule on whether to issue the stop-work order by Thursday. If she does not, the Defense Department has said **it plans to issue the first “substantive” JEDI task order to Microsoft on Friday.""**
+
+[Source](https://federalnewsnetwork.com/defense-main/2020/02/aws-seeks-trump-testimony-in-jedi-cloud-lawsuit/)
+
+If all goes accordingly, headlines will read AWS defeated by Azure. Refocusing attention on Microsoft's profitable and growing cloud business. Not to mention, this is a 10 year deal with openings to new government cloud deals.
+
+***Why is this a big deal?***
+
+From my personal experience in the cloud business, I've worked directly with one of Amazon's subsidiaries on large cloud deals (over 7-figures) in Asia & South America for streaming services that needed low-latency that AWS could not provide due to their datacenter locations. It took our company over 7 months through litigation, red-lines, etc to finalize a contract. One the contract was finished and approved, getting new business can be done in the same day, i.e., once Microsoft is awarded, they can continue growing their government deals as needed, in the same day.
+
+Thus, tomorrow's ruling is a big win (if it happens) for Microsoft.
+
+Update: [the author just posted a new article](https://federalnewsnetwork.com/defense-main/2020/02/as-key-jedi-court-decision-looms-pentagon-warns-of-national-security-concerns/)
+
+A few key takeaways:
+
+1. ""...the government argued not only that Amazon lacks the necessarily legal basis to get the temporary stop-work order, issuing one would cause **concrete harm to national security**.""
+
+*Favors MSFT*
+
+2) ""...To win the injunction, among other factors, Amazon needs to show that it’s likely to win the underlying lawsuit and that it its interests would suffer more without a work stoppage than the government’s would if the JEDI buildout was paused.""
+
+*Favors MSFT*
+
+3) “While still lacking several key features of the JEDI Cloud…\[DoD\] anticipates a  financial  harm of between $5 and $7 million dollars every month that performance of the JEDI contract is delayed.”
+
+*Nail in the coffin. Case dismissed. MSFT, flawless victory.*
+
+Edit 2: [Reporter responded to me with timeframe for court ruling tomorrow.](https://twitter.com/jserbuWFED/status/1227793712702509057?s=20)",DD,0.98

@@ -1,0 +1,10 @@
+My original intention was to use ML to determine WSB sentiment, however, I need proper training data. Specifically, I need a new variable associated with every submission: sentiment. But how do I determine sentiment? It's a dog biting its tail. I could do it myself, manually, but then the results would be biased. I could ask people on Reddit to help me do it, but even so, the bias could be even greater.
+
+Therefore, I will try some algorithms first.
+
+Firstly, I will use textblob to determine sentiment. Then, I will try to do it manually, by creating a list of positive words and a list of negative words, and assigning a sentiment based on that, the score and the num_comments. A question arises: should I say that a post is more bullish because it has more "bullish keywords"? Or I should assign the magnitude of bullishness/bearishness only by the amount of comments and upvotes? I think the latter might be more appropriate. I may also open up the jpeg link attached and see if it is a green or a red Robinhood screenshot, even though it is not a definitive indication of bullish/bearish sentiment. Now that I notice, I will need a sentiment table to track the sentiment evolution through time. 
+So, let's see how it goes.
+
+Results:
+the first method is cleary ineffective: textblob is not able to distinguish positive sentiment from negative sentiment; 
+by contrast, the second method seems to be extremely effective, however I have to test it on the march 2020 (bear month) comments before saying that with absolute certainty.

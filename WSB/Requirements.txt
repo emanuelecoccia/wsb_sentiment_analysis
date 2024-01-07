@@ -1,0 +1,12 @@
+numpy
+pandas
+matplotlib
+seaborn
+praw
+psaw
+alpaca-trade-api
+psycopg2
+emoji
+scikit-learn
+nlkt
+yfinance
